@@ -10,12 +10,15 @@ import { AuthService } from "./shared/auth.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material";
 
+
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { GoldbadgeComponent } from "./goldbadge/goldbadge.component";
 import { JavascriptComponent } from "./javascript/javascript.component";
 import { HtmlComponent } from "./html/html.component";
 import { CssComponent } from "./css/css.component";
+
+
 
 @NgModule({
   declarations: [
