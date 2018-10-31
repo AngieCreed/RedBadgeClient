@@ -9,12 +9,15 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AuthService } from "./shared/auth.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material";
-import { WelcomeComponent } from './welcome/welcome.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { GoldbadgeComponent } from './goldbadge/goldbadge.component';
-import { JavascriptComponent } from './javascript/javascript.component';
-import { HtmlComponent } from './html/html.component';
-import { CssComponent } from './css/css.component';
+
+
+import { WelcomeComponent } from "./welcome/welcome.component";
+import { NavbarComponent } from "./navbar/navbar.component";
+import { GoldbadgeComponent } from "./goldbadge/goldbadge.component";
+import { JavascriptComponent } from "./javascript/javascript.component";
+import { HtmlComponent } from "./html/html.component";
+import { CssComponent } from "./css/css.component";
+
 
 
 @NgModule({
@@ -31,11 +34,11 @@ import { CssComponent } from './css/css.component';
 
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     MaterialModule
   ],
   providers: [AuthService],

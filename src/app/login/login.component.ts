@@ -9,20 +9,30 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
-  createLogin: FormGroup;
+  // createLogin: FormGroup;
+  // createSignUp: FormGroup;
   loginUserData = {};
+  signUpUserData = {};
 
   constructor(
-    private lp: FormBuilder,
+    // private lp: FormBuilder,
+    // private signUp: FormBuilder,
     private _auth: AuthService,
     private _router: Router
   ) {}
 
   ngOnInit() {
-    this.createLogin = this.lp.group({
-      email: new FormControl(),
-      password: new FormControl()
-    });
+    // this.createLogin = this.lp.group({
+    //   email: new FormControl(),
+    //   password: new FormControl()
+    // });
+    // this.createSignUp = this.signUp.group({
+    //   firstname: new FormControl(),
+    //   lastname: new FormControl(),
+    //   email: new FormControl(),
+    //   username: new FormControl(),
+    //   password: new FormControl()
+    // });
   }
 
   loginUser() {
@@ -31,7 +41,19 @@ export class LoginComponent implements OnInit {
       res => {
         console.log(res);
         localStorage.setItem("token", res.sessionToken);
-        this._router.navigate(["/home"]);
+        this._router.navigate(["/welcome"]);
+      },
+      err => console.log(err)
+    );
+  }
+
+  signUpUser() {
+    console.log(this.signUpUserData);
+    this._auth.signUpUser(this.signUpUserData).subscribe(
+      res => {
+        // console.log(res);
+        localStorage.setItem("token", res.sessionToken);
+        this._router.navigate(["/welcome"]);
       },
       err => console.log(err)
     );
