@@ -1,15 +1,36 @@
-<header>
-  <div class="container">
-    <a class="logo">
-      
-    </a>
-    <nav>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-      </ul>
-      <div>
-      <img src="logo.png">
-      </div>
-    </nav>
-  </div>
-</header>
+<mat-toolbar>
+    <mat-toolbar-row>
+      <span class="title"><a href="">Bootcamp Footlocker</a></span>
+      <span class="example-spacer"></span>
+    
+     <a class="navbar-item"> 
+        <img src="assets/img/logo.png">
+      </a>
+    
+
+      <button mat-button [matMenuTriggerFor]="goldbadge">Gold Badge</button>
+      <mat-menu #goldbadge="matMenu">
+        <button mat-menu-item><a href="/javascript">JavaScript</a></button>
+        <button mat-menu-item><a href="/html">HTML</a></button>
+        <button mat-menu-item><a href="/css">CSS</a></button>
+        <button mat-menu-item><a href="#">My Footlocker</a></button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="bluebadge">Blue Badge</button>
+      <mat-menu #bluebadge="matMenu">
+        <button mat-menu-item>Under Construction</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="redbadge">Red Badge</button>
+      <mat-menu #redbadge="matMenu">
+        <button mat-menu-item>Under Construction</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="account">Account</button>
+      <mat-menu #account="matMenu">
+        <button mat-menu-item><a href="#">Edit Username</a></button>
+        <button mat-menu-item><a href="#">Delete Account</a></button>
+      </mat-menu>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
