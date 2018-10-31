@@ -2,7 +2,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 
-
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
@@ -11,17 +10,12 @@ import { AuthService } from "./shared/auth.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material";
 
-@NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent],
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { GoldbadgeComponent } from './goldbadge/goldbadge.component';
-import { JavascriptComponent } from './javascript/javascript.component';
-import { HtmlComponent } from './html/html.component';
-import { CssComponent } from './css/css.component';
+import { WelcomeComponent } from "./welcome/welcome.component";
+import { NavbarComponent } from "./navbar/navbar.component";
+import { GoldbadgeComponent } from "./goldbadge/goldbadge.component";
+import { JavascriptComponent } from "./javascript/javascript.component";
+import { HtmlComponent } from "./html/html.component";
+import { CssComponent } from "./css/css.component";
 
 @NgModule({
   declarations: [
@@ -31,7 +25,8 @@ import { CssComponent } from './css/css.component';
     GoldbadgeComponent,
     JavascriptComponent,
     HtmlComponent,
-    CssComponent
+    CssComponent,
+    LoginComponent
   ],
 
   imports: [
