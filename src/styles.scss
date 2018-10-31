@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "~@angular/material/prebuilt-themes/purple-green.css";
+:root {
+  --main: #8acfba;
+  --second: #53565a;
+  --third: #725b4d;
+}
+
