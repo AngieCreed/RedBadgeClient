@@ -1,0 +1,6 @@
+<form (ngSubmit)="loginUser()" [formGroup]="createLogin">
+  <input [(ngModel)]="loginUserData.email" type="email" placeholder="Email" formControlName="email" name="email">
+  <input [(ngModel)]="loginUserData.password" type="password" placeholder="Password" formControlName="password" name="password">
+  <button mat-raised-button type="submit">Login</button>
+  <!-- <button type="submit">Login</button> -->
+</form>
