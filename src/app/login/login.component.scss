@@ -1,9 +1,13 @@
+.entire {
+  display: flex;
+  justify-content: space-around;
+}
 .login-container {
   border-radius: 5px;
-  border: solid black 2px;
+  border: solid hsl(500, 300, 900) 2px;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 90%;
 }
 
 .login-form {
@@ -15,16 +19,24 @@
   text-align: center;
 }
 
+.signup-button-container {
+  text-align: center;
+}
+
 .login-button {
+  width: 20%;
+}
+
+.signup-button {
   width: 20%;
 }
 
 .signup-container {
   border-radius: 5px;
-  border: solid black 2px;
+  border: solid hsl(500, 300, 900) 2px;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 90%;
 }
 
 .signup-form {
