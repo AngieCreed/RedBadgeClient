@@ -31,11 +31,11 @@ import { CssComponent } from "./css/css.component";
 
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     MaterialModule
   ],
   providers: [AuthService],

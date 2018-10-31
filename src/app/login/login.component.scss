@@ -1,0 +1,33 @@
+.login-container {
+  border-radius: 5px;
+  border: solid black 2px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-button-container {
+  text-align: center;
+}
+
+.login-button {
+  width: 20%;
+}
+
+.signup-container {
+  border-radius: 5px;
+  border: solid black 2px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
