@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("token", res.sessionToken);
         localStorage.setItem("id", res.user.id);
         this._router.navigate(["/welcome"]);
-        this._ns.emit("Successful Login!");
+        // this._ns.emit("Successful Login!");
       },
       err => console.log(err)
     );
