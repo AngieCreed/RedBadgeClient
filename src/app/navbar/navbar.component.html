@@ -1,18 +1,19 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span class="title"><a href="">
-        <img src="assets/img/logo.png">
-      </a></span>
-    <span class="example-spacer"></span>
-
-
-    <button mat-button [matMenuTriggerFor]="goldbadge">Gold Badge</button>
-    <mat-menu #goldbadge="matMenu">
-      <button mat-menu-item routerLink="/javascript">JavaScript</button>
-      <button mat-menu-item routerLink="/html">HTML</button>
-      <button mat-menu-item routerLink="/css">CSS</button>
-      <button mat-menu-item routerLink="/items">My Footlocker</button>
-    </mat-menu>
+    <mat-toolbar-row>
+      <span class="title"> 
+          <a [routerLink]="['/']">
+          <img src="assets/img/logo.png">
+          </a>
+        </span>
+      <span class="example-spacer"></span>
+     
+      <button mat-button [matMenuTriggerFor]="goldbadge">Gold Badge</button>
+      <mat-menu #goldbadge="matMenu">
+        <button mat-menu-item routerLink ="/goldbadge">Gold Badge Home</button>
+        <button mat-menu-item routerLink ="/javascript">JavaScript</button>
+        <button mat-menu-item routerLink="/html">HTML</button>
+        <button mat-menu-item routerLink="/css">CSS</button>
+      </mat-menu>
 
     <button mat-button [matMenuTriggerFor]="bluebadge">Blue Badge</button>
     <mat-menu #bluebadge="matMenu">
@@ -23,7 +24,12 @@
     <mat-menu #redbadge="matMenu">
       <button mat-menu-item routerLink="#">Under Construction</button>
     </mat-menu>
-
+  
+    <button mat-button [matMenuTriggerFor]="myfootlocker">My Footlocker</button>
+      <mat-menu #myfootlocker="matMenu">
+        <button mat-menu-item routerLink="/items">My Footlocker</button>
+      </mat-menu>
+  
     <button mat-button [matMenuTriggerFor]="account">Account</button>
     <mat-menu #account="matMenu">
       <button mat-menu-item routerLink="/editusername">Edit Username</button>

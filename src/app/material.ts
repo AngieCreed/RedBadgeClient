@@ -25,7 +25,8 @@ import { MatListModule } from "@angular/material/list";
     MatIconModule,
     MatListModule
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    
   ],
   exports: [
     MatButtonModule,
@@ -38,7 +39,8 @@ import { MatListModule } from "@angular/material/list";
     MatIconModule,
     MatListModule
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    
   ]
 })
 export class MaterialModule {}
