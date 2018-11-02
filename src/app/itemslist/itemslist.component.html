@@ -1,0 +1,25 @@
+<div class="footlocker-items">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h1>JavaScript Footlocker Items:</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let item of items" (click)="selected.emit(item)">
+          <h3 mat-line>Title: {{item.title}}</h3>
+          <button mat-icon-button (click)="deleted.emit(item)">
+            <mat-icon>close</mat-icon>
+          </button>
+          <p mat-line>
+            Resource: {{item.resource}}
+          </p>
+          <p mat-line>
+            Comment: {{item.comment}}
+          </p>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
