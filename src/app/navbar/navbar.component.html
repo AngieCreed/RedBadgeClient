@@ -1,25 +1,35 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span class="title"><a href="">Bootcamp Footlocker</a></span>
-    <span class="example-spacer"></span>
+    <mat-toolbar-row>
+      <span class="title"><a href=""> 
+          <img src="assets/img/logo.png">
+        </a></span>
+      <span class="example-spacer"></span>
+    
+     
+      <button mat-button [matMenuTriggerFor]="goldbadge">Gold Badge</button>
+      <mat-menu #goldbadge="matMenu">
+        <button mat-menu-item routerLink ="/javascript">JavaScript</button>
+        <button mat-menu-item routerLink="/html">HTML</button>
+        <button mat-menu-item routerLink="/css">CSS</button>
+        <button mat-menu-item routerLink="/items">My Footlocker</button>
+      </mat-menu>
 
-    <a class="navbar-item">
-      <img src="assets/img/logo.png">
-    </a>
+      <button mat-button [matMenuTriggerFor]="bluebadge">Blue Badge</button>
+      <mat-menu #bluebadge="matMenu">
+        <button mat-menu-item routerLink="#">Under Construction</button>
+      </mat-menu>
 
+      <button mat-button [matMenuTriggerFor]="redbadge">Red Badge</button>
+      <mat-menu #redbadge="matMenu">
+        <button mat-menu-item routerLink="#">Under Construction</button>
+      </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="goldbadge">Gold Badge</button>
-    <mat-menu #goldbadge="matMenu">
-      <button mat-menu-item><a routerLink="/javascript">JavaScript</a></button>
-      <button mat-menu-item><a routerLink="/html">HTML</a></button>
-      <button mat-menu-item><a routerLink="/css">CSS</a></button>
-      <button mat-menu-item><a routerLink="/items">My Footlocker</a></button>
-    </mat-menu>
+      <button mat-button [matMenuTriggerFor]="account">Account</button>
+      <mat-menu #account="matMenu">
+        <button mat-menu-item routerLink="/editusername">Edit Username</button>
+        <button mat-menu-item routerLink="/deleteuser">Delete Account</button>
+      </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="bluebadge">Blue Badge</button>
-    <mat-menu #bluebadge="matMenu">
-      <button mat-menu-item>Under Construction</button>
-    </mat-menu>
 
     <button mat-button [matMenuTriggerFor]="redbadge">Red Badge</button>
     <mat-menu #redbadge="matMenu">

@@ -21,6 +21,9 @@ import { CssComponent } from "./css/css.component";
 import { ItemslistComponent } from "./itemslist/itemslist.component";
 import { ItemsComponent } from "./items/items.component";
 import { ItemcurrentComponent } from "./itemcurrent/itemcurrent.component";
+import { EditusernameComponent } from "./editusername/editusername.component";
+import { DeleteuserComponent } from './deleteuser/deleteuser.component'
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { ItemcurrentComponent } from "./itemcurrent/itemcurrent.component";
     LoginComponent,
     ItemslistComponent,
     ItemsComponent,
-    ItemcurrentComponent
+    ItemcurrentComponent,
+    EditusernameComponent,
+    DeleteuserComponent
+
   ],
 
   imports: [

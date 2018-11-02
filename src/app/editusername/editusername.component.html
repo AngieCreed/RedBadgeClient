@@ -1,0 +1,11 @@
+<div class="edituser-container">
+  <form (ngSubmit)="editUsername()" class="edit-username-form">
+    <mat-form-field>
+      <input matInput placeholder="New Username" [(ngModel)]="user.username" type="text" name="text" required>
+    </mat-form-field>
+
+    <div class="edituser-button-container">
+      <button class="edituser-button" mat-raised-button color="accent" type="submit">Update Username</button>
+    </div>
+  </form>
+</div>
