@@ -21,11 +21,12 @@ let id = localStorage.getItem("user.id");
 
 @Injectable()
 export class AuthService {
-  private id;
+  private id = localStorage.getItem("id");
   private _loginUrl = "http://localhost:3000/user/login";
   private _signUpUrl = "http://localhost:3000/user/signup";
   private _updateUsernameUrl = "";
   // private _updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
+  private _deleteUsernameUrl = `http://localhost:3000/user/${this.id}/delete`;
   constructor(private http: HttpClient) {}
 
   loginUser(user) {
@@ -46,7 +47,8 @@ export class AuthService {
     return this.http.put<any>(this._updateUsernameUrl, { user }, httpOptions);
   }
 
-  // deleteUser() {
-  //   return {"hi": 1};
-  // }
+  deleteUser() {
+    console.log("this._deleteUsernameUrl:",this._deleteUsernameUrl)
+    return this.http.delete<any>(this._deleteUsernameUrl, httpOptionsAuth );
+  }
 }
