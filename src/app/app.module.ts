@@ -29,7 +29,8 @@ import { CssComponent } from "./css/css.component";
     JavascriptComponent,
     HtmlComponent,
     CssComponent,
-    LoginComponent
+    LoginComponent,
+    
   ],
 
   imports: [

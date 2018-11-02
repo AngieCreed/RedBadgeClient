@@ -21,7 +21,8 @@ import { NgModule } from "@angular/core";
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    
   ],
   exports: [
     MatButtonModule,
@@ -33,7 +34,8 @@ import { NgModule } from "@angular/core";
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    
   ]
 
 })

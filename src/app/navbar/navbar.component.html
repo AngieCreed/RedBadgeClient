@@ -1,17 +1,18 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span class="title"><a href=""> 
+      <span class="title"> 
+          <a [routerLink]="['/']">
           <img src="assets/img/logo.png">
-        </a></span>
+          </a>
+        </span>
       <span class="example-spacer"></span>
-    
      
       <button mat-button [matMenuTriggerFor]="goldbadge">Gold Badge</button>
       <mat-menu #goldbadge="matMenu">
+        <button mat-menu-item routerLink ="/goldbadge">Gold Badge Home</button>
         <button mat-menu-item routerLink ="/javascript">JavaScript</button>
         <button mat-menu-item routerLink="/html">HTML</button>
         <button mat-menu-item routerLink="/css">CSS</button>
-        <button mat-menu-item routerLink="#">My Footlocker</button>
       </mat-menu>
 
       <button mat-button [matMenuTriggerFor]="bluebadge">Blue Badge</button>
@@ -22,6 +23,11 @@
       <button mat-button [matMenuTriggerFor]="redbadge">Red Badge</button>
       <mat-menu #redbadge="matMenu">
         <button mat-menu-item routerLink="#">Under Construction</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="myfootlocker">My Footlocker</button>
+      <mat-menu #myfootlocker="matMenu">
+        <button mat-menu-item routerLink="#">My Footlocker</button>
       </mat-menu>
 
       <button mat-button [matMenuTriggerFor]="account">Account</button>
