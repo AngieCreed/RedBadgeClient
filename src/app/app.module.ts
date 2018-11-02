@@ -17,6 +17,8 @@ import { GoldbadgeComponent } from "./goldbadge/goldbadge.component";
 import { JavascriptComponent } from "./javascript/javascript.component";
 import { HtmlComponent } from "./html/html.component";
 import { CssComponent } from "./css/css.component";
+import { EditusernameComponent } from "./editusername/editusername.component";
+import { DeleteuserComponent } from './deleteuser/deleteuser.component'
 
 
 
@@ -29,7 +31,9 @@ import { CssComponent } from "./css/css.component";
     JavascriptComponent,
     HtmlComponent,
     CssComponent,
-    LoginComponent
+    LoginComponent,
+    EditusernameComponent,
+    DeleteuserComponent
   ],
 
   imports: [

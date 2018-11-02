@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { AuthService } from "../shared/auth.service";
 
-
-
 @Component({
   selector: 'app-editusername',
   templateUrl: './editusername.component.html',
@@ -11,7 +9,9 @@ import { AuthService } from "../shared/auth.service";
 })
 export class EditusernameComponent implements OnInit {
 
-  newUsername = {};
+  user = {
+    username: ''
+  };
 
   constructor(
     private _auth: AuthService,
@@ -20,8 +20,8 @@ export class EditusernameComponent implements OnInit {
   ngOnInit() {
   }
   editUsername() {
-    console.log(this.newUsername);
-    this._auth.loginUser(this.newUsername).subscribe(
+    // console.log(this.newUsername);
+    this._auth.editUsername(this.user).subscribe(
       res => {
         console.log(res);
         localStorage.setItem("token", res.sessionToken);

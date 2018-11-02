@@ -6,6 +6,8 @@ import { GoldbadgeComponent } from "./goldbadge/goldbadge.component";
 import { CssComponent } from "./css/css.component";
 import { HtmlComponent } from "./html/html.component";
 import { JavascriptComponent } from "./javascript/javascript.component";
+import { EditusernameComponent } from "./editusername/editusername.component";
+import { DeleteuserComponent } from "./deleteuser/deleteuser.component";
 
 
 const routes: Routes = [
@@ -15,8 +17,9 @@ const routes: Routes = [
   { path: "goldbadge", component: GoldbadgeComponent },
   { path: "css", component: CssComponent },
   { path: "html", component: HtmlComponent },
-  { path: "javascript", component: JavascriptComponent }
-
+  { path: "javascript", component: JavascriptComponent },
+  { path: "editusername", component:EditusernameComponent},
+  { path: "deleteuser", component: DeleteuserComponent }
 ];
 
 @NgModule({
