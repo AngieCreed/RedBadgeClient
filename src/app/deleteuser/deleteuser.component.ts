@@ -16,16 +16,15 @@ export class DeleteuserComponent implements OnInit {
 
   ngOnInit() {
   }
-  // deleteUser() {
-  //   // console.log(this.newUsername);
-  //   this._auth.deleteUser().subscribe(
-  //     res => {
-  //       console.log(res);
-  //       localStorage.setItem("token", res.sessionToken);
-  //       this._router.navigate(["/welcome"]);
-  //     },
-  //     err => console.log(err)
-  //   );
-  // }
+  deleteUser() {
+    // console.log(this.newUsername);
+    this._auth.deleteUser().subscribe(
+      res => {
+        console.log(res);
+        this._router.navigate(["/welcome"]);
+      },
+      err => console.log(err)
+    );
+  }
 }
 // material snackbars and accordian
