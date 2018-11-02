@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl } from "@angular/forms";
 import { AuthService } from "../shared/auth.service";
+import { NotificationsService } from "../shared/notifications.service";
 import { Router } from "@angular/router";
 
 @Component({
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     // private lp: FormBuilder,
     // private signUp: FormBuilder,
+    private _ns: NotificationsService,
     private _auth: AuthService,
     private _router: Router
   ) {}
@@ -43,6 +45,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("token", res.sessionToken);
         localStorage.setItem("id", res.user.id);
         this._router.navigate(["/welcome"]);
+        // this._ns.emit("Successful Login!");
       },
       err => console.log(err)
     );
@@ -52,6 +55,7 @@ export class LoginComponent implements OnInit {
     console.log(this.signUpUserData);
     this._auth.signUpUser(this.signUpUserData).subscribe(
       res => {
+        this._ns.emit("Successful Login and Account Creation");
         // console.log(res);
         localStorage.setItem("token", res.sessionToken);
         this._router.navigate(["/welcome"]);

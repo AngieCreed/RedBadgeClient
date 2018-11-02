@@ -15,26 +15,25 @@
         <button mat-menu-item routerLink="/css">CSS</button>
       </mat-menu>
 
-      <button mat-button [matMenuTriggerFor]="bluebadge">Blue Badge</button>
-      <mat-menu #bluebadge="matMenu">
-        <button mat-menu-item routerLink="#">Under Construction</button>
-      </mat-menu>
+    <button mat-button [matMenuTriggerFor]="bluebadge">Blue Badge</button>
+    <mat-menu #bluebadge="matMenu">
+      <button mat-menu-item routerLink="#">Under Construction</button>
+    </mat-menu>
 
-      <button mat-button [matMenuTriggerFor]="redbadge">Red Badge</button>
-      <mat-menu #redbadge="matMenu">
-        <button mat-menu-item routerLink="#">Under Construction</button>
-      </mat-menu>
-
-      <button mat-button [matMenuTriggerFor]="myfootlocker">My Footlocker</button>
+    <button mat-button [matMenuTriggerFor]="redbadge">Red Badge</button>
+    <mat-menu #redbadge="matMenu">
+      <button mat-menu-item routerLink="#">Under Construction</button>
+    </mat-menu>
+  
+    <button mat-button [matMenuTriggerFor]="myfootlocker">My Footlocker</button>
       <mat-menu #myfootlocker="matMenu">
-        <button mat-menu-item routerLink="#">My Footlocker</button>
+        <button mat-menu-item routerLink="/items">My Footlocker</button>
       </mat-menu>
-
-      <button mat-button [matMenuTriggerFor]="account">Account</button>
-      <mat-menu #account="matMenu">
-        <button mat-menu-item routerLink="#">Edit Username</button>
-        <button mat-menu-item routerLink="#">Delete Account</button>
-      </mat-menu>
-
-    </mat-toolbar-row>
-  </mat-toolbar>
+  
+    <button mat-button [matMenuTriggerFor]="account">Account</button>
+    <mat-menu #account="matMenu">
+      <button mat-menu-item routerLink="/editusername">Edit Username</button>
+      <button mat-menu-item routerLink="/deleteuser">Delete Account</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
