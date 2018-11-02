@@ -6,7 +6,6 @@ import { EmailValidator } from "@angular/forms";
 const httpOptions = {
   headers: new HttpHeaders({
     "Content-Type": "application/json"
-    // Authorization: localStorage.getItem("token")
   })
 };
 
