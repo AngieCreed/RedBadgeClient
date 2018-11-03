@@ -9,6 +9,7 @@ import { JavascriptComponent } from "./javascript/javascript.component";
 import { ItemsComponent } from "./items/items.component";
 import { EditusernameComponent } from "./editusername/editusername.component";
 import { DeleteuserComponent } from "./deleteuser/deleteuser.component";
+import { AccountComponent } from "./account/account.component"
 
 const routes: Routes = [
   { path: "", component: LoginComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: "items", component: ItemsComponent },
   { path: "editusername", component: EditusernameComponent },
   { path: "deleteuser", component: DeleteuserComponent }
+  { path: "account", component: AccountComponent }
 ];
 
 @NgModule({

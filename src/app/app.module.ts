@@ -22,8 +22,8 @@ import { ItemslistComponent } from "./itemslist/itemslist.component";
 import { ItemsComponent } from "./items/items.component";
 import { ItemcurrentComponent } from "./itemcurrent/itemcurrent.component";
 import { EditusernameComponent } from "./editusername/editusername.component";
-import { DeleteuserComponent } from './deleteuser/deleteuser.component'
-
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +39,8 @@ import { DeleteuserComponent } from './deleteuser/deleteuser.component'
     ItemsComponent,
     ItemcurrentComponent,
     EditusernameComponent,
-    DeleteuserComponent
-
+    DeleteuserComponent,
+    AccountComponent
   ],
 
   imports: [
@@ -55,4 +55,5 @@ import { DeleteuserComponent } from './deleteuser/deleteuser.component'
   providers: [AuthService, ItemsService, NotificationsService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}

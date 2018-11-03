@@ -44,7 +44,7 @@ export class AuthService {
     this._updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
 
     console.log("this._updateUsernameUrl:", this._updateUsernameUrl);
-    return this.http.put<any>(this._updateUsernameUrl, { user }, httpOptions);
+    return this.http.put<any>(this._updateUsernameUrl, { user }, httpOptionsAuth);
   }
 
   deleteUser() {

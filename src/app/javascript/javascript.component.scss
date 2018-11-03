@@ -8,38 +8,39 @@ h3 {
 
 .video {
   display: flex;
-  margin: 3% 5% 5% 5% ;
-  
+  margin: 3% 5% 5% 5%;
+
 }
 
-  .example-card {
-    max-width: 200px;
-    max-height: 400px;
-    
-  }
+.example-card {
+  max-width: 200px;
+  max-height: 400px;
 
-  .example-cardI {
-    max-width: 200px;
-    max-height: 400px;
-    margin-left: 1em;
-  }
-   
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+}
 
- table {
+.example-cardI {
+  max-width: 200px;
+  max-height: 400px;
+  margin-left: 1em;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+table {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
-  
- }
 
-  th, td {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
 .ctr {
@@ -49,4 +50,3 @@ h3 {
 .rt {
   text-align: right;
 }
-
