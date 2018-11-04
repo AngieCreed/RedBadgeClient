@@ -24,9 +24,9 @@ export class AuthService {
   private id = localStorage.getItem("id");
   private _loginUrl = "http://localhost:3000/user/login";
   private _signUpUrl = "http://localhost:3000/user/signup";
-  private _updateUsernameUrl = "";
-  // private _updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
-  private _deleteUsernameUrl = `http://localhost:3000/user/${this.id}/delete`;
+  private _updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
+  private _deleteUserUrl = `http://localhost:3000/user/${this.id}/delete`;
+
   constructor(private http: HttpClient) {}
 
   loginUser(user) {
@@ -39,16 +39,11 @@ export class AuthService {
   }
 
   editUsername(user) {
-    this.id = localStorage.getItem("id");
-
-    this._updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
-
-    console.log("this._updateUsernameUrl:", this._updateUsernameUrl);
     return this.http.put<any>(this._updateUsernameUrl, { user }, httpOptionsAuth);
   }
 
   deleteUser() {
-    console.log("this._deleteUsernameUrl:",this._deleteUsernameUrl)
-    return this.http.delete<any>(this._deleteUsernameUrl, httpOptionsAuth );
+    return this.http.delete<any>(this._deleteUserUrl, httpOptionsAuth);
   }
 }
+

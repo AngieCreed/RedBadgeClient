@@ -25,9 +25,12 @@ export class EditusernameComponent implements OnInit {
   editUsername() {
     console.log("in editUsername editUsername:",this.currentUserName);
     console.log("in editUsername this.user:",this.user);
+    localStorage.setItem("userName", this.user.username);
     this._auth.editUsername(this.user).subscribe(
       res => {
         console.log(res);
+        
+        
         // localStorage.setItem("token", res.sessionToken);
         this._router.navigate(["/welcome"]);
       },
