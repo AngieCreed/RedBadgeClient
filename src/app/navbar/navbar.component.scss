@@ -3,7 +3,12 @@
 }
 
 .nav {
-  background: var(--ninth);
+
+  background: var(--second);
+  border-bottom-style: outset;
+  position: fixed;
+  z-index: 1;
+
 }
 
 .title {
