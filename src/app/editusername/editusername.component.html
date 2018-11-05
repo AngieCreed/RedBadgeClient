@@ -1,11 +1,19 @@
-<div class="edituser-container">
-  <form (ngSubmit)="editUsername()" class="edit-username-form">
-    <mat-form-field>
-      <input matInput placeholder="New Username" [(ngModel)]="user.username" type="text" name="text" required>
-    </mat-form-field>
-
-    <div class="edituser-button-container">
-      <button class="edituser-button" mat-raised-button color="accent" type="submit">Update Username</button>
-    </div>
-  </form>
+<div class="edit-card">
+  <mat-card>
+    <mat-card-title>Update Your Username</mat-card-title>
+    <mat-card-content>
+      <h2>
+        Current username:
+        <br />
+        "{{ currentUserName }}"
+      </h2>
+      <form (ngSubmit)="editUsername()" class="edit-username-form">
+        <mat-form-field>
+          <input matInput placeholder="New Username" [(ngModel)]="user.username" type="text" name="text" required>
+        </mat-form-field>
+        <br />
+        <button class="edituser-button" mat-raised-button color="accent" type="submit">Update Username</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>

@@ -12,10 +12,19 @@ export class EditusernameComponent implements OnInit {
     username: ""
   };
 
-  constructor(private _auth: AuthService, private _router: Router) {}
-  ngOnInit() {}
+  constructor(
+    private _auth: AuthService, 
+    private _router: Router) {}
+    currentUserName: string = '';
+
+  ngOnInit() {
+    this.currentUserName = localStorage.getItem("userName");
+    console.log('editUsername:',this.currentUserName);
+  }
+
   editUsername() {
-    // console.log(this.newUsername);
+    console.log("in editUsername editUsername:",this.currentUserName);
+    console.log("in editUsername this.user:",this.user);
     this._auth.editUsername(this.user).subscribe(
       res => {
         console.log(res);
@@ -25,4 +34,5 @@ export class EditusernameComponent implements OnInit {
       err => console.log(err)
     );
   }
-}
+}   
+ 
