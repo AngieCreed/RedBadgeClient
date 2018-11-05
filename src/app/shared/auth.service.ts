@@ -24,6 +24,7 @@ const httpOptionsAuth = {
 export class AuthService {
   private id = localStorage.getItem("id");
   private _loginUrl = "http://localhost:3000/user/login";
+  private _loginAdminUrl = "http://localhost:3000/user/login/admin";
   private _signUpUrl = "http://localhost:3000/user/signup";
 
   private _updateUsernameUrl = "";
@@ -61,7 +62,16 @@ export class AuthService {
     localStorage.removeItem("userName");
     localStorage.removeItem("firstName");
     localStorage.removeItem("lastName");
+    localStorage.removeItem("role");
     this._router.navigate([""]);
     // location.reload();
+  }
+
+  loginAdmin(user) {
+    return this.http.post<any>(
+      this._loginAdminUrl,
+      { user: user },
+      httpOptions
+    );
   }
 }
