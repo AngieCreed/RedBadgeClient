@@ -22,8 +22,12 @@ import { ItemslistComponent } from "./itemslist/itemslist.component";
 import { ItemsComponent } from "./items/items.component";
 import { ItemcurrentComponent } from "./itemcurrent/itemcurrent.component";
 import { EditusernameComponent } from "./editusername/editusername.component";
-import { DeleteuserComponent } from './deleteuser/deleteuser.component'
-
+import { DeleteuserComponent } from "./deleteuser/deleteuser.component";
+import { RedbadgeComponent } from "./redbadge/redbadge.component";
+import { RedbadgecommentsComponent } from "./redbadgecomments/redbadgecomments.component";
+import { RedbadgecommentscreateComponent } from "./redbadgecommentscreate/redbadgecommentscreate.component";
+import { RedbadgecommentslistComponent } from "./redbadgecommentslist/redbadgecommentslist.component";
+import { CommentsService } from "./shared/comments.service";
 
 @NgModule({
   declarations: [
@@ -39,8 +43,11 @@ import { DeleteuserComponent } from './deleteuser/deleteuser.component'
     ItemsComponent,
     ItemcurrentComponent,
     EditusernameComponent,
-    DeleteuserComponent
-
+    DeleteuserComponent,
+    RedbadgeComponent,
+    RedbadgecommentsComponent,
+    RedbadgecommentscreateComponent,
+    RedbadgecommentslistComponent
   ],
 
   imports: [
@@ -52,7 +59,7 @@ import { DeleteuserComponent } from './deleteuser/deleteuser.component'
     ReactiveFormsModule,
     MaterialModule
   ],
-  providers: [AuthService, ItemsService, NotificationsService],
+  providers: [AuthService, ItemsService, NotificationsService, CommentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
