@@ -11,6 +11,7 @@ import { NotificationsService } from "../shared/notifications.service";
 export class RedbadgecommentsComponent implements OnInit {
   comments: Comment[];
   currentComment: Comment;
+  currentUsername: string = localStorage.getItem("userName");
 
   constructor(private _cs: CommentsService) {}
 
@@ -31,6 +32,7 @@ export class RedbadgecommentsComponent implements OnInit {
   }
 
   postComment(comment) {
+    comment.username = this.currentUsername;
     this._cs.create(comment).subscribe(response => {
       this.getComments();
       this.resetCurrentComment();
