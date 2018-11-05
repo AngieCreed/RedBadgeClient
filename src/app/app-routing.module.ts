@@ -9,7 +9,7 @@ import { JavascriptComponent } from "./javascript/javascript.component";
 import { ItemsComponent } from "./items/items.component";
 import { EditusernameComponent } from "./editusername/editusername.component";
 import { DeleteuserComponent } from "./deleteuser/deleteuser.component";
-import { AccountComponent } from "./account/account.component"
+import { AccountComponent } from "./account/account.component";
 import { RedbadgeComponent } from "./redbadge/redbadge.component";
 
 const routes: Routes = [
@@ -21,10 +21,9 @@ const routes: Routes = [
   { path: "javascript", component: JavascriptComponent },
   { path: "items", component: ItemsComponent },
   { path: "editusername", component: EditusernameComponent },
-  { path: "deleteuser", component: DeleteuserComponent }
-  { path: "account", component: AccountComponent }
+  { path: "deleteuser", component: DeleteuserComponent },
+  { path: "account", component: AccountComponent },
   { path: "redbadge", component: RedbadgeComponent }
-
 ];
 
 @NgModule({
