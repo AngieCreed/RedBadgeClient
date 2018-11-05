@@ -42,7 +42,11 @@ export class AuthService {
   }
 
   editUsername(user) {
-    return this.http.put<any>(this._updateUsernameUrl, { user }, httpOptionsAuth);
+    return this.http.put<any>(
+      this._updateUsernameUrl,
+      { user },
+      httpOptionsAuth
+    );
   }
 
   deleteUser() {
@@ -54,9 +58,10 @@ export class AuthService {
     // localStorage.clear();
     localStorage.removeItem("token");
     localStorage.removeItem("id");
-    localStorage.removeItem("username");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("firstName");
+    localStorage.removeItem("lastName");
     this._router.navigate([""]);
     // location.reload();
   }
 }
-
