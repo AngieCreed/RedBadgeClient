@@ -9,6 +9,8 @@ import { Item } from "../shared/item.model";
 export class ItemslistComponent implements OnInit {
   @Input()
   items: Item[];
+  @Input()
+  getItemsParent: any;
 
   @Output()
   selected = new EventEmitter();
@@ -18,10 +20,6 @@ export class ItemslistComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // this.getListItems();
+    this.getItemsParent();
   }
-
-  // getListItems() {
-  //   return this.items ? this.items : null;
-  // }
 }
