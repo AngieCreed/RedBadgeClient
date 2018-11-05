@@ -1,12 +1,9 @@
-<div class="container">
-  <!-- <app-itemslist class="col-50" [items]="items">
-  </app-itemslist> -->
-
-  <app-itemslist [items]="items" (selected)="selectItem($event)" (deleted)="deleteItem($event)">
-  </app-itemslist>
+<div class="items-container">
 
   <app-itemcurrent [item]="currentItem" (saved)="saveItem($event)" (cancelled)="cancel($event)">
   </app-itemcurrent>
-  <!-- <app-itemcurrent class="col-50" [item]="currentItem">
-  </app-itemcurrent> -->
+
+  <app-itemslist [items]="items" (selected)="selectItem($event)" (deleted)="deleteItem($event)" [getItemsParent]="getItems">
+  </app-itemslist>
+
 </div>

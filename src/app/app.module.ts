@@ -24,7 +24,13 @@ import { ItemcurrentComponent } from "./itemcurrent/itemcurrent.component";
 import { EditusernameComponent } from "./editusername/editusername.component";
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 import { AccountComponent } from './account/account.component';
-import { LogoutComponent } from './logout/logout.component';
+
+import { RedbadgeComponent } from "./redbadge/redbadge.component";
+import { RedbadgecommentsComponent } from "./redbadgecomments/redbadgecomments.component";
+import { RedbadgecommentscreateComponent } from "./redbadgecommentscreate/redbadgecommentscreate.component";
+import { RedbadgecommentslistComponent } from "./redbadgecommentslist/redbadgecommentslist.component";
+import { CommentsService } from "./shared/comments.service";
+
 
 @NgModule({
   declarations: [
@@ -41,8 +47,12 @@ import { LogoutComponent } from './logout/logout.component';
     ItemcurrentComponent,
     EditusernameComponent,
     DeleteuserComponent,
-    AccountComponent,
-    LogoutComponent
+    AccountComponent
+    RedbadgeComponent,
+    RedbadgecommentsComponent,
+    RedbadgecommentscreateComponent,
+    RedbadgecommentslistComponent
+
   ],
 
   imports: [
@@ -54,7 +64,7 @@ import { LogoutComponent } from './logout/logout.component';
     ReactiveFormsModule,
     MaterialModule
   ],
-  providers: [AuthService, ItemsService, NotificationsService],
+  providers: [AuthService, ItemsService, NotificationsService, CommentsService],
   bootstrap: [AppComponent]
 })
 

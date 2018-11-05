@@ -1,4 +1,5 @@
-<mat-toolbar color="primary">
+
+<mat-toolbar class="nav">
     <mat-toolbar-row>
       <span class="title"> 
           <a [routerLink]="['/']">
@@ -22,20 +23,20 @@
 
     <button mat-button [matMenuTriggerFor]="redbadge">Red Badge</button>
     <mat-menu #redbadge="matMenu">
-      <button mat-menu-item routerLink="#">Under Construction</button>
+      <button mat-menu-item routerLink="/redbadge">Under Construction</button>
     </mat-menu>
-  
+
     <button mat-button [matMenuTriggerFor]="myfootlocker">My Footlocker</button>
-      <mat-menu #myfootlocker="matMenu">
-        <button mat-menu-item routerLink="/items">My Footlocker</button>
-      </mat-menu>
-  
+    <mat-menu #myfootlocker="matMenu">
+      <button mat-menu-item routerLink="/items">My Footlocker</button>
+    </mat-menu>
+
     <button mat-button [matMenuTriggerFor]="account">Account</button>
     <mat-menu #account="matMenu">
       <!-- <button mat-menu-item routerLink="/editusername">Edit Username</button>
       <button mat-menu-item routerLink="/deleteuser">Delete Account</button> -->
       <button mat-menu-item routerLink="/account">Account</button>
-      <button mat-menu-item routerLink="/logout">Logout</button>
+      <button mat-menu-item (click)="userLogout()">Log Out</button>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
