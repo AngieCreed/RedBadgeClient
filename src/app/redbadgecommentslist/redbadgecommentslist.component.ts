@@ -7,6 +7,7 @@ import { Comment } from "../shared/comment.model";
   styleUrls: ["./redbadgecommentslist.component.scss"]
 })
 export class RedbadgecommentslistComponent implements OnInit {
+  role: string = localStorage.getItem("role");
   @Input()
   comments: Comment[];
   @Input()
@@ -17,8 +18,10 @@ export class RedbadgecommentslistComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    // this.getCommentsParent();
-    // location.reload();
+  ngOnInit() {}
+
+  isAdmin() {
+    if (this.role === "admin") return true;
+    else return false;
   }
 }

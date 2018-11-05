@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { CommentsService } from "../shared/comments.service";
 import { Comment } from "../shared/comment.model";
 import { NotificationsService } from "../shared/notifications.service";
+import { AuthService } from "../shared/auth.service";
 
 @Component({
   selector: "app-redbadgecomments",
@@ -13,7 +14,7 @@ export class RedbadgecommentsComponent implements OnInit {
   currentComment: Comment;
   currentUsername: string = localStorage.getItem("userName");
 
-  constructor(private _cs: CommentsService) {}
+  constructor(private _cs: CommentsService, private _auth: AuthService) {}
 
   ngOnInit() {
     this.getComments();
