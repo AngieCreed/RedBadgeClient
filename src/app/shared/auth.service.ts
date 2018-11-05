@@ -17,7 +17,7 @@ const httpOptionsAuth = {
   })
 };
 
-let id = localStorage.getItem("user.id");
+// let id = localStorage.getItem("user.id");
 
 @Injectable()
 export class AuthService {

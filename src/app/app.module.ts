@@ -24,6 +24,7 @@ import { ItemcurrentComponent } from "./itemcurrent/itemcurrent.component";
 import { EditusernameComponent } from "./editusername/editusername.component";
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 import { AccountComponent } from './account/account.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AccountComponent } from './account/account.component';
     ItemcurrentComponent,
     EditusernameComponent,
     DeleteuserComponent,
-    AccountComponent
+    AccountComponent,
+    LogoutComponent
   ],
 
   imports: [
