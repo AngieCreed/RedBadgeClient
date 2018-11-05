@@ -3,4 +3,5 @@ export interface Item {
   title?: string;
   resource?: string;
   comment?: string;
+  userId?: string;
 }

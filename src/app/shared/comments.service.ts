@@ -22,7 +22,11 @@ export class CommentsService {
   }
 
   create(comment: Comment) {
-    return this.http.post<any>(`${this._baseUrl}/create`, comment, httpOptions);
+    return this.http.post<any>(
+      `${this._baseUrl}/${comment.username}/create`,
+      comment,
+      httpOptions
+    );
   }
 
   delete(comment: Comment) {
