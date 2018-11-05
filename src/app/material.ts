@@ -6,7 +6,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material";
 import { MatSelectModule } from "@angular/material";
 import { MatTabsModule } from "@angular/material/tabs";
-import { MatGridListModule } from "@angular/material/grid-list";
+import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCardModule } from "@angular/material/card";
 import { NgModule } from "@angular/core";
 import { MatListModule } from "@angular/material/list";

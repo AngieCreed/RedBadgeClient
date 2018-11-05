@@ -1,5 +1,13 @@
+.master-container{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 0;
+}
+
 h2 {
   text-align: center;
+  margin-bottom: 2%;
+  padding-top: 2%;
 }
 
 h3 {
@@ -8,8 +16,11 @@ h3 {
 
 .video {
   display: flex;
-  margin: 3% 5% 5% 5% ;
-  
+  width: 70vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-bottom: 3%;
+  padding-top: 2%;
 }
 
   .example-card {
@@ -36,7 +47,7 @@ h3 {
  }
 
   th, td {
-    border-bottom: 1px solid #ddd;
+    // border-bottom: 1px solid #ddd;
     padding: 10px;
     text-align: center;
 }
@@ -48,4 +59,3 @@ h3 {
 .rt {
   text-align: right;
 }
-
