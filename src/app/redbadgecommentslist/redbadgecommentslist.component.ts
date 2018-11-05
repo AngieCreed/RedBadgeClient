@@ -19,5 +19,6 @@ export class RedbadgecommentslistComponent implements OnInit {
 
   ngOnInit() {
     // this.getCommentsParent();
+    // location.reload();
   }
 }

@@ -56,6 +56,7 @@ export class AuthService {
     localStorage.removeItem("id");
     localStorage.removeItem("username");
     this._router.navigate([""]);
+    // location.reload();
   }
 }
 
