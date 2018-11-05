@@ -21,8 +21,8 @@ const routes: Routes = [
   { path: "javascript", component: JavascriptComponent },
   { path: "items", component: ItemsComponent },
   { path: "editusername", component: EditusernameComponent },
-  { path: "deleteuser", component: DeleteuserComponent }
-  { path: "account", component: AccountComponent }
+  { path: "deleteuser", component: DeleteuserComponent },
+  { path: "account", component: AccountComponent },
   { path: "redbadge", component: RedbadgeComponent }
 
 ];

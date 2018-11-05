@@ -46,7 +46,7 @@ import { CommentsService } from "./shared/comments.service";
     ItemcurrentComponent,
     EditusernameComponent,
     DeleteuserComponent,
-    AccountComponent
+    AccountComponent,
     RedbadgeComponent,
     RedbadgecommentsComponent,
     RedbadgecommentscreateComponent,
