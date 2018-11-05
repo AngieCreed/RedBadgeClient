@@ -20,6 +20,6 @@ export class ItemslistComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.getItemsParent();
+    // this.getItemsParent();
   }
 }
