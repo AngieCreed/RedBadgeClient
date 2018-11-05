@@ -1,24 +1,37 @@
-<div class="welcome">
-  <h1>Welcome to Eleven Fifty Academy!</h1>
-</div>
-<div class="main-content">
-  <p>
-    As you begin your journey into the world of coding, we are excited to provide this collection of resources, created by former Eleven Fifty Academy students, to help you along the way.
+
+<div class="container">
+  <div class="welcome">
+    <h1>Welcome to Eleven Fifty Academy!</h1>
+  </div>
+  <div class="personalized">
+    
+  </div>
+  <div class="main-content">
+    <h2>
+      Coder: {{ firstName }} {{ lastName }}
+      <br />
+      Username: {{ userName }} 
+    </h2>
+    <p>
+      As you begin your journey into the world of coding, we are excited to provide this collection of resources, created by former Eleven Fifty Academy students, to help you along the way.
+    </p> <br>
+    <p>
+      You will soon discover that self-directed learning is encouraged and becomes a larger percentage of your time spent at Eleven Fifty, as well as in the industry itself.
+    </p> <br>
+    <p>
+      As a beginner looking for resources, it is often difficult and frustrating to know where to start if you are not sure what you are looking for.  This site is intended to provide you with resources for each phase of your time here, from gold through red badge.  
+    </p> <br>
+    <p> 
+      In addition to what we provide, you will be able to create and save your own resources through your personal account.  With everything in one place, you will have access to a trove of information with just a few clicks.
     </p>
-  <p>You will soon discover that self-directed learning is encouraged and becomes a larger percentage of your time spent at Eleven Fifty, as well as in the industry itself.
-  </p>
-  <p>As a beginner looking for resources, it is often difficult and frustrating to know where to start if you are not sure what you are looking for.  This site is intended to provide you with resources for each phase of your time here, from gold through red badge.  
-  </p>
-  <p> 
-    In addition to what we provide, you will be able to create and save your own resources through your personal account.  With everything in one place, you will have access to a trove of information with just a few clicks.
+    <p>
+      To get started, navigate to the gold badge link below, but feel free to come back and navigate to the other areas that you can look forward to in the coming weeks.
     </p>
-  <p>
-    To get started, navigate to the gold badge link below, but feel free to come back and navigate to the other areas that you can look forward to in the coming weeks.
-    </p>
-  <h3>Good Luck!</h3>
-<div class="button">
-    <button class="b b1">Gold</button>
-    <button class="b b2">Blue</button>
-    <button class="b b3">Red</button>
-</div>
+    <h3>Good Luck!</h3>
+    <div class="button" fxLayoutAlign="center center">
+        <button mat-raised-button  fxLayoutAlign="center center" routerLink="/goldbadge">Gold</button>
+        <button mat-raised-button  fxLayoutAlign="center center" routerLink="#">Blue</button>
+        <button mat-raised-button  fxLayoutAlign="center center" routerLink="#">Red</button>
+    </div>
+  </div>
 </div>

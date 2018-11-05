@@ -1,0 +1,32 @@
+.footlocker-items {
+  // border: 1px solid black;
+  // display: flex;
+  // justify-content: center;
+  margin: 50px 0 50px 0;
+  border-radius: 5px;
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.2);
+  // border: 1px solid black;
+  width: 700px;
+  border: solid var(--ninth) 2px;
+  background-color: whitesmoke;
+}
+
+.item {
+  box-shadow: 3px 3px var(--main), -0.7em 0 0.4em var(--second);
+  margin: 5px 15px 15px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--main);
+}
+
+// .items {
+//   padding: 15px;
+// }
+
+.mat-list-item h3 {
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.mat-list-item p {
+  padding: 5px;
+}

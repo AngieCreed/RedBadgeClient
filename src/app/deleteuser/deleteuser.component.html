@@ -1,0 +1,24 @@
+<div class="delete-card">
+  <mat-card>
+    <mat-card-title>Delete Your Account</mat-card-title>
+    <mat-card-content>
+      <button class="deleteuser-button" mat-raised-button (click)="deleteButton()" color="accent" type="submit">DELETE
+        ACCOUNT</button>
+      <div *ngIf="confirmDeleteShow">
+
+        <br /><br />
+        <mat-card>
+          <mat-card-content class="center">
+            <mat-card-title>
+              <p>
+                Please be aware,<br />this cannot be undone.
+              </p>
+            </mat-card-title>
+            <button color="warn" color="warn" mat-raised-button (click)="deleteUser()">CONFIRM DELETE ACCOUNT</button>
+            <br />
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

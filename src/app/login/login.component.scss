@@ -1,0 +1,80 @@
+.entire {
+  background-color: var(--second);
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.left-side {
+  width: 500px;
+  border-radius: 5px;
+  border: 2px solid var(--ninth);
+  margin-top: 100px;
+  height: 500px;
+  background-color: whitesmoke;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.login-container {
+  // border-radius: 5px;
+  // border: solid hsl(500, 300, 900) 2px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-button-container {
+  text-align: center;
+}
+
+.signup-button-container {
+  text-align: center;
+}
+
+.login-button {
+  border: 1px solid white;
+}
+
+.signup-button {
+  border: 1px solid white;
+}
+
+.signup-container {
+  // border-radius: 5px;
+  // border: solid hsl(500, 300, 900) 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  // width: 90%;
+}
+
+.right-side {
+  width: 500px;
+  border-radius: 5px;
+  border: 2px solid var(--ninth);
+  margin-top: 100px;
+  height: 300px;
+  background-color: whitesmoke;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.admin-container {
+  // border-radius: 5px;
+  // border: solid hsl(500, 300, 900) 2px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+}

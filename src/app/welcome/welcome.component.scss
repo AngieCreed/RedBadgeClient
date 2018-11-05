@@ -1,21 +1,47 @@
-
+.container {
+    // background: lightgray;
+    height: 100vh;
+   
+}
 
 .welcome {
+    padding-top: 40px;
     margin-bottom: 30px;
 }
 
 h1 {
     text-align: center;
     width: 100vw;
+    margin: 0;
 }
 
 .main-content {
-    width: 50vw;
-    margin-left: 25vw;
-    margin-right: 25vw;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 h3 {
     text-align: center;
     font-size: 25px;
+    padding-bottom: 30px;
+}
+
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+button {
+    margin: 0 5%;
+}
+
+.button {
+    text-align: center;
+    padding-bottom: 40px;
 }

@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$bf-theme-primary: mat-palette($mat-efagreen, 500, 300, 900);
+$bf-theme-accent: mat-palette($mat-efagray, 500, 300, 900);
+$bf-theme-warn: mat-palette($mat-efared, 500, 300, 900);
+
+$bf-theme: mat-light-theme($bf-theme-primary, $bf-theme-accent, $bf-theme-warn);
+
+@include angular-material-theme($bf-theme);
+

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
 
   constructor() { }
+    firstName=localStorage.getItem("firstName");
+    lastName=localStorage.getItem("lastName");
+    userName=localStorage.getItem("userName");
 
   ngOnInit() {
   }
-
 }

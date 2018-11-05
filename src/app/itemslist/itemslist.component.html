@@ -1,0 +1,28 @@
+<!-- <div class="footlocker-items"> -->
+<mat-card class="footlocker-items">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>My Footlocker Items:</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item class="item" *ngFor="let item of items">
+        <h3 class="items" mat-line>Title: {{item.title}}</h3>
+        <button mat-icon-button (click)="selected.emit(item)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deleted.emit(item)">
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+        <p class="items" mat-line>
+          Resource: {{item.resource}}
+        </p>
+        <p class="items" mat-line>
+          Comment: {{item.comment}}
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+<!-- </div> -->
