@@ -1,20 +1,19 @@
-
 <mat-toolbar class="nav">
-    <mat-toolbar-row>
-      <span class="title"> 
-          <a [routerLink]="['/']">
-          <img src="assets/img/logo.png">
-          </a>
-        </span>
-      <span class="example-spacer"></span>
-     
-      <button mat-button [matMenuTriggerFor]="goldbadge">Gold Badge</button>
-      <mat-menu #goldbadge="matMenu">
-        <button mat-menu-item routerLink ="/goldbadge">Gold Badge Home</button>
-        <button mat-menu-item routerLink ="/javascript">JavaScript</button>
-        <button mat-menu-item routerLink="/html">HTML</button>
-        <button mat-menu-item routerLink="/css">CSS</button>
-      </mat-menu>
+  <mat-toolbar-row class="navbar-shadow">
+    <span class="title">
+      <a [routerLink]="['/']">
+        <img src="assets/img/logo.png">
+      </a>
+    </span>
+    <span class="example-spacer"></span>
+
+    <button mat-button [matMenuTriggerFor]="goldbadge">Gold Badge</button>
+    <mat-menu #goldbadge="matMenu">
+      <button mat-menu-item routerLink="/goldbadge">Gold Badge Home</button>
+      <button mat-menu-item routerLink="/javascript">JavaScript</button>
+      <button mat-menu-item routerLink="/html">HTML</button>
+      <button mat-menu-item routerLink="/css">CSS</button>
+    </mat-menu>
 
     <button mat-button [matMenuTriggerFor]="bluebadge">Blue Badge</button>
     <mat-menu #bluebadge="matMenu">
@@ -33,8 +32,8 @@
 
     <button mat-button [matMenuTriggerFor]="account">Account</button>
     <mat-menu #account="matMenu">
-      <button mat-menu-item routerLink="/editusername">Edit Username</button>
-      <button mat-menu-item routerLink="/deleteuser">Delete Account</button>
+      <!-- <button mat-menu-item routerLink="/editusername">Edit Username</button>
+      <button mat-menu-item routerLink="/deleteuser">Delete Account</button> -->
       <button mat-menu-item routerLink="/account">Account</button>
       <button mat-menu-item (click)="userLogout()">Log Out</button>
     </mat-menu>

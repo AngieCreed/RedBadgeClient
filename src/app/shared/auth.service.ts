@@ -18,13 +18,15 @@ const httpOptionsAuth = {
   })
 };
 
-let id = localStorage.getItem("user.id");
+// let id = localStorage.getItem("user.id");
 
 @Injectable()
 export class AuthService {
   private id = localStorage.getItem("id");
   private _loginUrl = "http://localhost:3000/user/login";
+  private _loginAdminUrl = "http://localhost:3000/user/login/admin";
   private _signUpUrl = "http://localhost:3000/user/signup";
+
   private _updateUsernameUrl = "";
   // private _updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
   private _deleteUsernameUrl = `http://localhost:3000/user/${this.id}/delete`;
@@ -41,12 +43,11 @@ export class AuthService {
   }
 
   editUsername(user) {
-    this.id = localStorage.getItem("id");
-
-    this._updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
-
-    console.log("this._updateUsernameUrl:", this._updateUsernameUrl);
-    return this.http.put<any>(this._updateUsernameUrl, { user }, httpOptionsAuth);
+    return this.http.put<any>(
+      this._updateUsernameUrl,
+      { user },
+      httpOptionsAuth
+    );
   }
 
   deleteUser() {
@@ -58,7 +59,19 @@ export class AuthService {
     // localStorage.clear();
     localStorage.removeItem("token");
     localStorage.removeItem("id");
-    localStorage.removeItem("username");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("firstName");
+    localStorage.removeItem("lastName");
+    localStorage.removeItem("role");
     this._router.navigate([""]);
+    // location.reload();
+  }
+
+  loginAdmin(user) {
+    return this.http.post<any>(
+      this._loginAdminUrl,
+      { user: user },
+      httpOptions
+    );
   }
 }

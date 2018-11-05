@@ -11,6 +11,7 @@ export class ItemcurrentComponent implements OnInit {
   currentResource: string;
   currentComment: string;
   selectedItem: Item;
+  currentId: string = localStorage.getItem("id");
 
   @Output()
   saved = new EventEmitter();
@@ -22,9 +23,11 @@ export class ItemcurrentComponent implements OnInit {
     if (obj) {
       (this.currentName = obj.title),
         (this.currentResource = obj.resource),
-        (this.currentComment = obj.comment);
+        (this.currentComment = obj.comment),
+        (this.currentId = obj.userId);
     }
     this.selectedItem = Object.assign({}, obj);
+    console.log(this.selectedItem);
   }
   constructor() {}
 

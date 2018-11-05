@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { CommentsService } from "../shared/comments.service";
 import { Comment } from "../shared/comment.model";
 import { NotificationsService } from "../shared/notifications.service";
+import { AuthService } from "../shared/auth.service";
 
 @Component({
   selector: "app-redbadgecomments",
@@ -11,8 +12,9 @@ import { NotificationsService } from "../shared/notifications.service";
 export class RedbadgecommentsComponent implements OnInit {
   comments: Comment[];
   currentComment: Comment;
+  currentUsername: string = localStorage.getItem("userName");
 
-  constructor(private _cs: CommentsService) {}
+  constructor(private _cs: CommentsService, private _auth: AuthService) {}
 
   ngOnInit() {
     this.getComments();
@@ -31,6 +33,7 @@ export class RedbadgecommentsComponent implements OnInit {
   }
 
   postComment(comment) {
+    comment.username = this.currentUsername;
     this._cs.create(comment).subscribe(response => {
       this.getComments();
       this.resetCurrentComment();

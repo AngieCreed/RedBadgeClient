@@ -17,13 +17,18 @@ export class ItemsService {
 
   constructor(private http: HttpClient) {}
 
-  getall() {
+  getall(id) {
     console.log("hi");
-    return this.http.get<any>(`${this._baseUrl}/getall`, httpOptions);
+    return this.http.get<any>(`${this._baseUrl}/${id}/getall`, httpOptions);
   }
 
   create(item: Item) {
-    return this.http.post<any>(`${this._baseUrl}/create`, item, httpOptions);
+    console.log(item.userId);
+    return this.http.post<any>(
+      `${this._baseUrl}/${item.userId}/create`,
+      item,
+      httpOptions
+    );
   }
 
   update(item: Item) {

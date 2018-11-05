@@ -22,9 +22,9 @@ export class DeleteuserComponent implements OnInit {
     console.log('confirmDeleteShow:',this.confirmDeleteShow)
     this.confirmDeleteShow = !this.confirmDeleteShow;
     console.log('confirmDeleteShow:',this.confirmDeleteShow)
-
   }
   deleteUser() {
+    console.log('in deleteuser');
     this._auth.deleteUser().subscribe(
       res => {
         console.log(res);

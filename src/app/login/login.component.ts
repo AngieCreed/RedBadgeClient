@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   // createSignUp: FormGroup;
   loginUserData = {};
   signUpUserData = {};
+  loginAdminData = {};
 
   constructor(
     // private lp: FormBuilder,
@@ -44,9 +45,10 @@ export class LoginComponent implements OnInit {
         console.log(res);
         localStorage.setItem("token", res.sessionToken);
         localStorage.setItem("id", res.user.id);
-
-        localStorage.setItem("username", res.user.username);
-
+        localStorage.setItem("userName", res.user.username);
+        localStorage.setItem("firstName", res.user.firstname);
+        localStorage.setItem("lastName", res.user.lastname);
+        localStorage.setItem("role", res.user.role);
         this._router.navigate(["/welcome"]);
         // this._ns.emit("Successful Login!");
       },
@@ -61,7 +63,30 @@ export class LoginComponent implements OnInit {
         this._ns.emit("Successful Login and Account Creation");
         // console.log(res);
         localStorage.setItem("token", res.sessionToken);
+        localStorage.setItem("id", res.user.id);
+        localStorage.setItem("userName", res.user.username);
+        localStorage.setItem("firstName", res.user.firstname);
+        localStorage.setItem("lastName", res.user.lastname);
+        localStorage.setItem("role", res.user.role);
         this._router.navigate(["/welcome"]);
+      },
+      err => console.log(err)
+    );
+  }
+
+  loginAdmin() {
+    console.log(this.loginAdminData);
+    this._auth.loginAdmin(this.loginAdminData).subscribe(
+      res => {
+        console.log(res);
+        localStorage.setItem("token", res.sessionToken);
+        localStorage.setItem("id", res.user.id);
+        localStorage.setItem("userName", res.user.username);
+        localStorage.setItem("firstName", res.user.firstname);
+        localStorage.setItem("lastName", res.user.lastname);
+        localStorage.setItem("role", res.user.role);
+        this._router.navigate(["/welcome"]);
+        // this._ns.emit("Successful Login!");
       },
       err => console.log(err)
     );
