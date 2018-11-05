@@ -44,8 +44,9 @@ export class LoginComponent implements OnInit {
         console.log(res);
         localStorage.setItem("token", res.sessionToken);
         localStorage.setItem("id", res.user.id);
-
-        localStorage.setItem("username", res.user.username);
+        localStorage.setItem("userName", res.user.username);
+        localStorage.setItem("firstName", res.user.firstname);
+        localStorage.setItem("lastName", res.user.lastname);
 
         this._router.navigate(["/welcome"]);
         // this._ns.emit("Successful Login!");
@@ -61,9 +62,15 @@ export class LoginComponent implements OnInit {
         this._ns.emit("Successful Login and Account Creation");
         // console.log(res);
         localStorage.setItem("token", res.sessionToken);
+        localStorage.setItem("id", res.user.id);
+        localStorage.setItem("userName", res.user.username);
+        localStorage.setItem("firstName", res.user.firstname);
+        localStorage.setItem("lastName", res.user.lastname);
         this._router.navigate(["/welcome"]);
       },
       err => console.log(err)
     );
   }
 }
+
+
