@@ -8,7 +8,6 @@ import { MatInputModule } from "@angular/material";
 import { MatSelectModule } from "@angular/material";
 import { MatTabsModule } from "@angular/material/tabs";
 import {MatGridListModule} from '@angular/material/grid-list';
-import {MatCardModule} from '@angular/material/card';
 import { NgModule } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
@@ -23,7 +22,7 @@ import { MatListModule } from "@angular/material/list";
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
     MatGridListModule,
     MatCardModule,
     
@@ -37,7 +36,7 @@ import { MatListModule } from "@angular/material/list";
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
     MatGridListModule,
     MatCardModule,
     
