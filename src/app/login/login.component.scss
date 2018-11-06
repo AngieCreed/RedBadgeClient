@@ -81,7 +81,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .admin-form {
   display: flex;
   flex-direction: column;
@@ -99,4 +98,22 @@
 
 .mat-tab-label {
   color: white !important;
+
+::ng-deep .loginFail .mat-simple-snackbar{
+  color: #e2eaf5;
+}
+::ng-deep snack-bar-container.loginFail {
+  background: #D9514E;
+}
+::ng-deep .loginSuccess .mat-simple-snackbar{
+  color: #f8fbff;
+}
+::ng-deep snack-bar-container.loginSuccess {
+  background: #8acfba;
+}
+::ng-deep .adminSuccess .mat-simple-snackbar{
+  color: #f8fbff;
+}
+::ng-deep snack-bar-container.adminSuccess {
+  background: #F79569;
 }

@@ -29,7 +29,10 @@ export class AuthService {
   private _updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
   private _deleteUsernameUrl = `http://localhost:3000/user/${this.id}/delete`;
 
-  constructor(private http: HttpClient, private _router: Router) {}
+  constructor(
+    private http: HttpClient, 
+    private _router: Router,
+    ) {}
 
   loginUser(user) {
     return this.http.post<any>(this._loginUrl, { user: user }, httpOptions);
@@ -62,6 +65,7 @@ export class AuthService {
     localStorage.removeItem("lastName");
     localStorage.removeItem("role");
     this._router.navigate([""]);
+
     // location.reload();
   }
 

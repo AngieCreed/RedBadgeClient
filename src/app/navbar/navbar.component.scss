@@ -38,3 +38,9 @@ a:visited {
   color: white;
   margin: 3px;
 }
+::ng-deep .logoutSuccess .mat-simple-snackbar{
+  color: #53565a;
+}
+::ng-deep snack-bar-container.logoutSuccess {
+  background: #F6D57A;
+}
