@@ -25,9 +25,7 @@ export class AuthService {
   private id = localStorage.getItem("id");
   private _loginUrl = "http://localhost:3000/user/login";
   private _signUpUrl = "http://localhost:3000/user/signup";
-
-  private _updateUsernameUrl = "";
-  // private _updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
+  private _updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
   private _deleteUsernameUrl = `http://localhost:3000/user/${this.id}/delete`;
 
   constructor(private http: HttpClient, private _router: Router) {}

@@ -10,6 +10,7 @@
 }
 
 :root {
+  // use example: "background: var(--main);"
   --main: #8acfba; // green
   --second: #53565a; // gray
   --third: #725b4d; // brown
@@ -19,6 +20,9 @@
   --seventh: #F79569; // orange
   --eighth: #86BAD3; // blue
   --ninth: #D9514E; // red
+  --yellow: #F6D57A; 
+  --blue: #86BAD3;
+  --red: #D9514E;
 }
 
 .text-center {
@@ -27,4 +31,8 @@
 .center {
   padding: 0;
   margin: auto;
+}
+
+a {
+  color: var(--blue);
 }
