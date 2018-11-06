@@ -3,7 +3,6 @@
 }
 
 .nav {
-
   background: var(--second);
   border-bottom-style: outset;
   position: fixed;
@@ -37,4 +36,5 @@ a:visited {
 .mat-button {
   color: white;
   margin: 3px;
+  font-weight: 700;
 }
