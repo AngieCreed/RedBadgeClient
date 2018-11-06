@@ -1,10 +1,18 @@
-import { Component, Input, Output, EventEmitter, OnInit } from "@angular/core";
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnInit,
+  ViewEncapsulation
+} from "@angular/core";
 import { Item } from "../shared/item.model";
 
 @Component({
   selector: "app-itemcurrent",
   templateUrl: "./itemcurrent.component.html",
-  styleUrls: ["./itemcurrent.component.scss"]
+  styleUrls: ["./itemcurrent.component.scss"],
+  encapsulation: ViewEncapsulation.None
 })
 export class ItemcurrentComponent implements OnInit {
   currentName: string;

@@ -1,10 +1,18 @@
-import { Component, Input, Output, EventEmitter, OnInit } from "@angular/core";
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnInit,
+  ViewEncapsulation
+} from "@angular/core";
 import { Comment } from "../shared/comment.model";
 
 @Component({
   selector: "app-redbadgecommentscreate",
   templateUrl: "./redbadgecommentscreate.component.html",
-  styleUrls: ["./redbadgecommentscreate.component.scss"]
+  styleUrls: ["./redbadgecommentscreate.component.scss"],
+  encapsulation: ViewEncapsulation.None
 })
 export class RedbadgecommentscreateComponent implements OnInit {
   newComment: Comment;

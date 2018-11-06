@@ -1,11 +1,26 @@
 .redbadge-comments {
   width: 800px;
-  border: solid 1px var(--ninth);
-  box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.2);
-  background-color: whitesmoke;
+  // border: solid 1px var(--ninth);
+  // box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #53565a;
   margin-top: 5px;
+  color: white;
+  // filter: drop-shadow(0 0 0.75rem darkgray);
+  border-style: outset;
+  border-width: 3px;
+  opacity: 0.9%;
+  box-shadow: 2px 4px 20px #f0f0f0;
+  opacity: 0.9;
+  border-radius: 10px;
+  // background: rgba(211, 211, 211, 0);
+  border-style: outset;
+  border-width: 3px;
 }
 
 .mat-card-title {
   border-bottom: solid 1px black;
+}
+
+.mat-card-content p {
+  color: white;
 }

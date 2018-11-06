@@ -1,11 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-
 * {
   margin: 0;
   padding: 0;
   font-family: nunito;
+}
+
+body {
+  background-image: linear-gradient(#53565a, #d9514e);
+  min-height: 100vh;
 }
 
 :root {
@@ -13,15 +16,15 @@
   --main: #8acfba; // green
   --second: #53565a; // gray
   --third: #725b4d; // brown
-  --forth: #9AD0D5; // teal
-  --fifth: #F6D57A; // yellow
-  --sixth: #A992BC; // purple
-  --seventh: #F79569; // orange
-  --eighth: #86BAD3; // blue
-  --ninth: #D9514E; // red
-  --yellow: #F6D57A; 
-  --blue: #86BAD3;
-  --red: #D9514E;
+  --forth: #9ad0d5; // teal
+  --fifth: #f6d57a; // yellow
+  --sixth: #a992bc; // purple
+  --seventh: #f79569; // orange
+  --eighth: #86bad3; // blue
+  --ninth: #d9514e; // red
+  --yellow: #f6d57a;
+  --blue: #86bad3;
+  --red: #d9514e;
 }
 
 .text-center {
