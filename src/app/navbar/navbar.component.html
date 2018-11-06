@@ -30,12 +30,11 @@
       <button mat-menu-item routerLink="/items">My Footlocker</button>
     </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="account">Account</button>
+    <button mat-button (click)="showLoginOrLogout()" [matMenuTriggerFor]="account">Account</button>
     <mat-menu #account="matMenu">
-      <!-- <button mat-menu-item routerLink="/editusername">Edit Username</button>
-      <button mat-menu-item routerLink="/deleteuser">Delete Account</button> -->
       <button mat-menu-item routerLink="/account">Account</button>
-      <button mat-menu-item (click)="userLogout()">Log Out</button>
+      <button *ngIf="hasToken" mat-menu-item (click)="userLogout()">Log Out</button>
+      <button *ngIf="!hasToken" mat-menu-item routerLink="/">Log In</button>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

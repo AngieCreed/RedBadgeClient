@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "../shared/auth.service";
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
 @Component({
   selector: "app-editusername",
@@ -14,26 +15,28 @@ export class EditusernameComponent implements OnInit {
 
   constructor(
     private _auth: AuthService, 
-    private _router: Router) {}
-    currentUserName: string = '';
+    private _router: Router,
+    private _snackBar: MatSnackBar
+  ) {}
+  currentUserName: string = '';
 
   ngOnInit() {
     this.currentUserName = localStorage.getItem("userName");
-    console.log('editUsername:',this.currentUserName);
   }
 
   editUsername() {
-    console.log("in editUsername editUsername:",this.currentUserName);
-    console.log("in editUsername this.user:",this.user);
-    localStorage.setItem("userName", this.user.username);
-    this._auth.editUsername(this.user).subscribe(
-      res => {
-        console.log(res);
-        // localStorage.setItem("token", res.sessionToken);
-        this._router.navigate(["/welcome"]);
-      },
-      err => console.log(err)
-    );
+    if(this.user.username){
+      localStorage.setItem("userName", this.user.username);
+      this._auth.editUsername(this.user).subscribe(
+        res => {
+          console.log(res);
+          let displayUsername=localStorage.getItem("userName")
+          this._snackBar.open(`New Username: ${displayUsername}`,"", {duration: 3000})
+          this._router.navigate(["/welcome"]);
+        },
+        err => console.log(err)
+      );
+    }
   }
 }   
  
