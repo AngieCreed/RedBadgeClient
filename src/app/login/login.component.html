@@ -1,7 +1,7 @@
 <div class="entire">
 
 
-  <div class="left-side">
+  <div @fade class="left-side">
     <mat-tab-group>
       <mat-tab label="Login">
         <div class="login-container">
@@ -14,7 +14,7 @@
                 required>
             </mat-form-field>
             <div class="login-button-container">
-              <button class="login-button" mat-raised-button color="primary" type="submit">Login!</button>
+              <button class="login-button" mat-raised-button type="submit">Login!</button>
             </div>
           </form>
         </div>
@@ -40,7 +40,7 @@
               <input matInput [(ngModel)]="signUpUserData.password" type="password" placeholder="Password" name="password">
             </mat-form-field>
             <div class="signup-button-container">
-              <button class="signup-button" mat-raised-button color="primary" type="submit">Create!</button>
+              <button class="signup-button" mat-raised-button type="submit">Create!</button>
             </div>
           </form>
         </div>
@@ -48,7 +48,7 @@
     </mat-tab-group>
   </div>
 
-  <div class="right-side">
+  <div @fade class="right-side">
     <mat-tab-group>
       <mat-tab label="Admin Login">
         <div class="admin-container">
@@ -61,7 +61,7 @@
                 required>
             </mat-form-field>
             <div class="login-button-container">
-              <button class="login-button" mat-raised-button color="primary" type="submit">Login!</button>
+              <button class="login-button" mat-raised-button type="submit">Login!</button>
             </div>
           </form>
         </div>

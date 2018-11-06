@@ -1,10 +1,23 @@
 .card-container {
+  margin-top: 150px;
   width: 800px;
   display: flex;
-  border: solid 1px var(--ninth);
-  box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.2);
-  background-color: whitesmoke;
-  margin-top: 50px;
+  // border: solid 1px var(--ninth);
+  // box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.2);
+  // filter: drop-shadow(0 0 0.75rem darkgray);
+  // box-shadow: 2px 4px 20px #f0f0f0;
+  border-style: outset;
+  border-width: 3px;
+  opacity: 0.9%;
+  background-color: #53565a;
+  color: white;
+
+  box-shadow: 2px 4px 20px #f0f0f0;
+  opacity: 0.9;
+  border-radius: 10px;
+  // background: rgba(211, 211, 211, 0);
+  border-style: outset;
+  border-width: 3px;
 }
 
 .form-container {
@@ -16,5 +29,17 @@
 }
 
 .commentcreate-button {
+  color: white;
   border: solid 1px white;
+  background-color: var(--eighth);
+}
+
+.mat-form-field-label {
+  color: white !important;
+}
+.mat-form-field-underline {
+  background-color: white !important;
+}
+.mat-form-field-ripple {
+  background-color: white !important;
 }

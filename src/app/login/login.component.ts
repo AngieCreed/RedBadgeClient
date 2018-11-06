@@ -1,13 +1,23 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl } from "@angular/forms";
 import { AuthService } from "../shared/auth.service";
 import { NotificationsService } from "../shared/notifications.service";
 import { Router } from "@angular/router";
+import { trigger, transition, style, animate } from "@angular/animations";
 
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.scss"]
+  styleUrls: ["./login.component.scss"],
+  encapsulation: ViewEncapsulation.None,
+  animations: [
+    trigger("fade", [
+      transition("void => *", [
+        style({ backgroundColor: "var(--ninth)", opacity: 0 }),
+        animate(2000, style({ backgroundColor: "dimgray", opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class LoginComponent implements OnInit {
   // createLogin: FormGroup;

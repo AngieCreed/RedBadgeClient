@@ -1,13 +1,24 @@
 .card-container {
-  margin-top: 150px;
+  margin-top: 200px;
   border-radius: 5px;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+  // box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0 0 0.75rem darkgray);
+  box-shadow: 2px 4px 20px #f0f0f0;
+  border-style: outset;
+  border-width: 3px;
+  opacity: 0.9%;
   width: 550px;
-  border: solid var(--ninth) 2px;
-  background-color: whitesmoke;
+  // border: solid var(--ninth) 2px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #53565a;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .itemcurrent-cardcontent {
+  color: white;
   display: flex;
   flex-direction: column;
 }
@@ -17,7 +28,17 @@
 }
 
 .itemcurrent-button {
-  background-color: var(--main);
+  background-color: var(--eighth);
   color: white;
   border: solid white 1px;
+}
+
+.mat-form-field-label {
+  color: white !important;
+}
+.mat-form-field-underline {
+  background-color: white !important;
+}
+.mat-form-field-ripple {
+  background-color: white !important;
 }
