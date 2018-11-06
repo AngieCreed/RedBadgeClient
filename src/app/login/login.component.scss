@@ -99,21 +99,21 @@
 .mat-tab-label {
   color: white !important;
 }
-::ng-deep .loginFail .mat-simple-snackbar{
-  color: #e2eaf5;
+.loginFail .mat-simple-snackbar{
+  color: #D9514E;
 }
-::ng-deep snack-bar-container.loginFail {
-  background: #D9514E;
+snack-bar-container.loginFail {
+  background: #f8fbff;
 }
-::ng-deep .loginSuccess .mat-simple-snackbar{
+.loginSuccess .mat-simple-snackbar{
   color: #f8fbff;
 }
-::ng-deep snack-bar-container.loginSuccess {
+snack-bar-container.loginSuccess {
   background: #8acfba;
 }
-::ng-deep .adminSuccess .mat-simple-snackbar{
+.adminSuccess .mat-simple-snackbar{
   color: #f8fbff;
 }
-::ng-deep snack-bar-container.adminSuccess {
+snack-bar-container.adminSuccess {
   background: #F79569;
 }
