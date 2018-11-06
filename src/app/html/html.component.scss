@@ -15,15 +15,30 @@ p {
   text-align: center;
 }
 
+h1 {
+  text-align: center;
+  padding-top: 4%;
+  font-weight: 700;
+
+}
+
 h2 {
   text-align: center;
   margin-bottom: 2%;
   padding-top: 4%;
+  font-weight: 700;
+  // font-size: 20px;
 }
 
-h3 {
+// h3 {
+//   text-align: center;
+//   margin-bottom: 2%;
+// }
+
+h4 {
   text-align: center;
   margin-bottom: 2%;
+  
 }
 
 .video {
@@ -50,6 +65,7 @@ h3 {
   transform: scale(1.1);
 }
 
+
 .example-cardI {
   max-width: 200px;
   max-height: 400px;
@@ -75,14 +91,18 @@ table {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
-  box-shadow: 2px 4px 20px #f0f0f0;
-  opacity: 0.9;
-  border-radius: 10px;
-  background: rgba(211, 211, 211, 0);
+
+  // box-shadow: 2px 4px 20px #f0f0f0;
+  opacity: .8;
+  border-radius: 15px;
+  // background-color: #63666b;
+  background-image: radial-gradient(rgb(151, 148, 148), black);
   border-style: outset;
   border-width: 3px;
   width: 60vw;
-}
+  filter: drop-shadow(0 0 0.50rem lightgray);
+ }
+
 
 th,
 td {
@@ -92,8 +112,18 @@ td {
   width: 25vw;
 }
 
+
+tr:hover {
+  background-color: rgba(0, 0, 0, .4);
+}
+
 .ctr {
   text-align: center;
+}
+
+.ctr-head {
+  text-align: center;
+  font-size: 18px;
 }
 
 .rt {
@@ -108,3 +138,4 @@ a:link {
 a:visited {
   color: white;
 }
+
