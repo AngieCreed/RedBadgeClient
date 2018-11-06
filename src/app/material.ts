@@ -10,7 +10,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCardModule } from "@angular/material/card";
 import { NgModule } from "@angular/core";
 import { MatListModule } from "@angular/material/list";
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({

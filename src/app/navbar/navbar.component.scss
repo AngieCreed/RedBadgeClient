@@ -3,7 +3,11 @@
 }
 
 .nav {
-  background: var(--ninth);
+  background: var(--second);
+  border-bottom-style: outset;
+  position: fixed;
+  z-index: 1;
+
 }
 
 .title {
@@ -32,4 +36,11 @@ a:visited {
 .mat-button {
   color: white;
   margin: 3px;
+  font-weight: 700;
+}
+::ng-deep .logoutSuccess .mat-simple-snackbar{
+  color: #53565a;
+}
+::ng-deep snack-bar-container.logoutSuccess {
+  background: #F6D57A;
 }

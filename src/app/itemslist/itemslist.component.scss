@@ -2,20 +2,28 @@
   // border: 1px solid black;
   // display: flex;
   // justify-content: center;
-  margin: 50px 0 50px 0;
+  margin: 150px 0 150px 0;
   border-radius: 5px;
-  box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.2);
-  // border: 1px solid black;
+  // box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0 0 0.75rem darkgray);
+  box-shadow: 2px 4px 20px #f0f0f0;
+  border-style: outset;
+  border-width: 3px;
   width: 700px;
-  border: solid var(--ninth) 2px;
-  background-color: whitesmoke;
+  // border: solid var(--ninth) 2px;
+  // background-color: whitesmoke;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #53565a;
+  color: white;
 }
 
 .item {
-  box-shadow: 3px 3px var(--main), -0.7em 0 0.4em var(--second);
+  color: white;
+  box-shadow: 3px 3px var(--eighth), -0.7em 0 0.4em var(--second);
   margin: 5px 15px 15px 5px;
   border-radius: 3px;
-  border: 1px solid var(--main);
+  border: 1px solid var(--eighth);
 }
 
 // .items {

@@ -1,17 +1,19 @@
 .entire {
-  background-color: var(--second);
+  // background-color: var(--second);
   display: flex;
   justify-content: space-around;
   height: 100vh;
 }
 
 .left-side {
+  color: white;
   width: 500px;
   border-radius: 5px;
-  border: 2px solid var(--ninth);
-  margin-top: 100px;
+  border: 3px solid var(--eighth);
+  border-style: outset;
+  margin-top: 150px;
   height: 500px;
-  background-color: whitesmoke;
+  background-color: dimgray;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .login-container {
@@ -41,11 +43,15 @@
 }
 
 .login-button {
-  border: 1px solid white;
+  color: white;
+  background-color: var(--eighth);
+  border: 1px solid var(--main);
 }
 
 .signup-button {
-  border: 1px solid white;
+  color: white;
+  background-color: var(--eighth);
+  border: 1px solid var(--main);
 }
 
 .signup-container {
@@ -58,12 +64,14 @@
 }
 
 .right-side {
+  color: white;
   width: 500px;
   border-radius: 5px;
-  border: 2px solid var(--ninth);
-  margin-top: 100px;
+  border: 3px solid var(--eighth);
+  border-style: outset;
+  margin-top: 200px;
   height: 300px;
-  background-color: whitesmoke;
+  background-color: dimgray;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .admin-container {
@@ -73,8 +81,39 @@
   display: flex;
   flex-direction: column;
 }
-
 .admin-form {
   display: flex;
   flex-direction: column;
+}
+
+.mat-form-field-label {
+  color: white !important;
+}
+.mat-form-field-underline {
+  background-color: white !important;
+}
+.mat-form-field-ripple {
+  background-color: white !important;
+}
+
+.mat-tab-label {
+  color: white !important;
+}
+.loginFail .mat-simple-snackbar{
+  color: #D9514E;
+}
+snack-bar-container.loginFail {
+  background: #f8fbff;
+}
+.loginSuccess .mat-simple-snackbar{
+  color: #f8fbff;
+}
+snack-bar-container.loginSuccess {
+  background: #8acfba;
+}
+.adminSuccess .mat-simple-snackbar{
+  color: #f8fbff;
+}
+snack-bar-container.adminSuccess {
+  background: #F79569;
 }
