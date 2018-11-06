@@ -11,4 +11,5 @@ export class NotificationsService {
   emit(notification) {
     this._subject.next(notification);
   }
+  
 }
