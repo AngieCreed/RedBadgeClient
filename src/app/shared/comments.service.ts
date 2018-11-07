@@ -16,14 +16,14 @@ export class CommentsService {
 
   constructor(private http: HttpClient) {}
 
-  getall() {
-    console.log("hi");
-    return this.http.get<any>(`${this._baseUrl}/redbadge/getall`, httpOptions);
+  getall(location) {
+    console.log('location in getAll:',location);
+    return this.http.get<any>(`${this._baseUrl}/${location}/getall`, httpOptions);
   }
 
   create(comment: Comment) {
     return this.http.post<any>(
-      `${this._baseUrl}/${comment.username}/create`,
+      `${this._baseUrl}/${comment.username}/${comment.location}/create`,
       comment,
       httpOptions
     );

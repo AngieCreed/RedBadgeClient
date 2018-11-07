@@ -39,7 +39,10 @@ import { trigger, transition, style, animate } from "@angular/animations";
   ]
 })
 export class CssComponent implements OnInit {
-  constructor() {}
+  css="css";
+  title="CSS"
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }

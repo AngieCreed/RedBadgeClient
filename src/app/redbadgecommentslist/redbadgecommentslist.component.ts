@@ -12,6 +12,7 @@ export class RedbadgecommentslistComponent implements OnInit {
   comments: Comment[];
   @Input()
   getCommentsParent: any;
+  @Input() title: string;
 
   @Output()
   deleted = new EventEmitter();
