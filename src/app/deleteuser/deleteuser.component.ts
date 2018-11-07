@@ -30,7 +30,9 @@ export class DeleteuserComponent implements OnInit {
         console.log(res);
         this._router.navigate(["/"]);
       },
-      err => console.log(err)
+      err => {
+        console.log(err);
+      }
     );
   }
 }

@@ -40,6 +40,13 @@ export class LoginComponent implements OnInit {
     ) {}
 
   ngOnInit() {
+    localStorage.clear();
+    // localStorage.removeItem("token");
+    // localStorage.removeItem("id");
+    // localStorage.removeItem("userName");
+    // localStorage.removeItem("firstName");
+    // localStorage.removeItem("lastName");
+    // localStorage.removeItem("role");
     // this.createLogin = this.lp.group({
     //   email: new FormControl(),
     //   password: new FormControl()
