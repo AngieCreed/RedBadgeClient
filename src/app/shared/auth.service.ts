@@ -18,7 +18,7 @@ const httpOptionsAuth = {
   })
 };
 
-// let id = localStorage.getItem("user.id");
+let id = localStorage.getItem("user.id");
 
 @Injectable()
 export class AuthService {
@@ -26,8 +26,7 @@ export class AuthService {
   private _loginUrl = "http://localhost:3000/user/login";
   private _loginAdminUrl = "http://localhost:3000/user/login/admin";
   private _signUpUrl = "http://localhost:3000/user/signup";
-  private _updateUsernameUrl = `http://localhost:3000/user/${this.id}/update`;
-  private _deleteUsernameUrl = `http://localhost:3000/user/${this.id}/delete`;
+  // private _deleteUsernameUrl = `http://localhost:3000/user/${this.id}/delete`;
 
   constructor(
     private http: HttpClient, 
@@ -44,20 +43,25 @@ export class AuthService {
   }
 
   editUsername(user) {
+    let id = localStorage.getItem("id");
+    let _updateUsernameUrl = `http://localhost:3000/user/${id}/update`;
     return this.http.put<any>(
-      this._updateUsernameUrl,
+      _updateUsernameUrl,
       { user },
       httpOptionsAuth
     );
   }
 
   deleteUser() {
-    console.log("this._deleteUsernameUrl:", this._deleteUsernameUrl);
-    return this.http.delete<any>(this._deleteUsernameUrl, httpOptionsAuth);
+    let id = localStorage.getItem("id");
+    let _deleteUsernameUrl = `http://localhost:3000/user/${id}/delete`;
+    console.log("this._deleteUsernameUrl:", _deleteUsernameUrl);
+    return this.http.delete<any>(_deleteUsernameUrl, httpOptionsAuth);
   }
 
   userLogout() {
     // localStorage.clear();
+    console.log("in userLogoutttttt");
     localStorage.removeItem("token");
     localStorage.removeItem("id");
     localStorage.removeItem("userName");

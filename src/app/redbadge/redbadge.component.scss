@@ -1,0 +1,53 @@
+.container {
+  // background: lightgray;
+  height: 100vh;
+}
+
+.gold-badge {
+  color: white;
+  padding-top: 175px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  text-align: center;
+  width: 100vw;
+  margin: 0;
+}
+
+.main-content {
+  color: white;
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+h3 {
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+button {
+  margin: 0 5%;
+}
+
+.button {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.angular-button {
+  border: solid 1px white;
+  color: white;
+  background-color: var(--eighth);
+}

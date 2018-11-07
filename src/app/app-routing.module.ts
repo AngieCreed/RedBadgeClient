@@ -11,6 +11,7 @@ import { EditusernameComponent } from "./editusername/editusername.component";
 import { DeleteuserComponent } from "./deleteuser/deleteuser.component";
 import { AccountComponent } from "./account/account.component";
 import { RedbadgeComponent } from "./redbadge/redbadge.component";
+import { AngularComponent } from "./angular/angular.component";
 
 const routes: Routes = [
   { path: "", component: LoginComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: "editusername", component: EditusernameComponent },
   { path: "deleteuser", component: DeleteuserComponent },
   { path: "account", component: AccountComponent },
-  { path: "redbadge", component: RedbadgeComponent }
+  { path: "redbadge", component: RedbadgeComponent },
+  { path: "angular", component: AngularComponent }
 ];
 
 @NgModule({

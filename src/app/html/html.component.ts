@@ -47,6 +47,8 @@ import {
   ]
 })
 export class HtmlComponent implements OnInit {
+  html="html";
+  title="HTML"
   constructor() {}
 
   ngOnInit() {}
