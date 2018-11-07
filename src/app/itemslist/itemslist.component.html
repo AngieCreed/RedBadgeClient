@@ -5,7 +5,7 @@
       <h1>My Footlocker Items:</h1>
     </mat-card-title>
   </mat-card-header>
-  <mat-card-content>
+  <mat-card-content *ngIf="items">
     <mat-list [@fadeIn]="items.length">
       <mat-list-item class="item" *ngFor="let item of items">
 
