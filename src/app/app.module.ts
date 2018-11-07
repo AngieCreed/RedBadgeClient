@@ -30,6 +30,7 @@ import { RedbadgecommentsComponent } from "./redbadgecomments/redbadgecomments.c
 import { RedbadgecommentscreateComponent } from "./redbadgecommentscreate/redbadgecommentscreate.component";
 import { RedbadgecommentslistComponent } from "./redbadgecommentslist/redbadgecommentslist.component";
 import { CommentsService } from "./shared/comments.service";
+import { AngularComponent } from './angular/angular.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CommentsService } from "./shared/comments.service";
     RedbadgeComponent,
     RedbadgecommentsComponent,
     RedbadgecommentscreateComponent,
-    RedbadgecommentslistComponent
+    RedbadgecommentslistComponent,
+    AngularComponent
   ],
 
   imports: [
