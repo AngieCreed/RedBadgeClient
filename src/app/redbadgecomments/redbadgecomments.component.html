@@ -1,4 +1,5 @@
 <div class=comments-container>
   <app-redbadgecommentscreate [currentComment]="currentComment" (posted)="postComment($event)"></app-redbadgecommentscreate>
-  <app-redbadgecommentslist [comments]="comments" (deleted)="deleteComment($event)" [getCommentsParent]="getComments"></app-redbadgecommentslist>
+  
+  <app-redbadgecommentslist [comments]="comments" (deleted)="deleteComment($event)" [getCommentsParent]="getComments" [title]="title"></app-redbadgecommentslist>
 </div>
