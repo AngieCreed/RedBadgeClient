@@ -8,41 +8,40 @@ import { trigger, transition, style, animate } from "@angular/animations";
   animations: [
     trigger("slideIn1", [
       transition(":enter", [
-        style({ transform: "translateX(160%)" }),
-        animate("800ms ease-in", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateX(700%)" }),
+        animate("700ms 700ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ]),
     trigger("slideIn2", [
       transition(":enter", [
-        style({ transform: "translateX(160%)" }),
-        animate("1400ms ease-in", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateX(700%)" }),
+        animate("1300ms 700ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ]),
     trigger("slideIn3", [
       transition(":enter", [
-        style({ transform: "translateX(160%)" }),
-        animate("2000ms ease-in", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateX(700%)" }),
+        animate("1900ms 700ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ]),
     trigger("slideIn4", [
       transition(":enter", [
-        style({ transform: "translateX(160%)" }),
-        animate("2600ms ease-in", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateX(700%)" }),
+        animate("2500ms 700ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ]),
     trigger("slideIn5", [
       transition(":enter", [
-        style({ transform: "translateX(160%)" }),
-        animate("3200ms ease-in", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateX(700%)" }),
+        animate("3100ms 700ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ])
   ]
 })
 export class CssComponent implements OnInit {
-  css="css";
-  title="CSS"
-  constructor() { }
+  css = "css";
+  title = "CSS";
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

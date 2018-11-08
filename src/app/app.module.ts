@@ -8,7 +8,6 @@ import { LoginComponent } from "./login/login.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AuthService } from "./shared/auth.service";
 import { ItemsService } from "./shared/items.service";
-import { NotificationsService } from "./shared/notifications.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material";
 
@@ -30,7 +29,7 @@ import { RedbadgecommentsComponent } from "./redbadgecomments/redbadgecomments.c
 import { RedbadgecommentscreateComponent } from "./redbadgecommentscreate/redbadgecommentscreate.component";
 import { RedbadgecommentslistComponent } from "./redbadgecommentslist/redbadgecommentslist.component";
 import { CommentsService } from "./shared/comments.service";
-import { AngularComponent } from './angular/angular.component';
+import { AngularComponent } from "./angular/angular.component";
 
 @NgModule({
   declarations: [
@@ -64,7 +63,7 @@ import { AngularComponent } from './angular/angular.component';
     ReactiveFormsModule,
     MaterialModule
   ],
-  providers: [AuthService, ItemsService, NotificationsService, CommentsService],
+  providers: [AuthService, ItemsService, CommentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
