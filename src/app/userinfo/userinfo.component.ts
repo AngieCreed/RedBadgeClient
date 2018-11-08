@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class UserinfoComponent implements OnInit {
 
   constructor() { }
-firstName = localStorage.getItem("firstName");
-lastName = localStorage.getItem("lastName");
-username = localStorage.getItem("username");
+  
+  firstName = localStorage.getItem("firstName");
+  lastName = localStorage.getItem("lastName");
+  userName = localStorage.getItem("userName");
+  email = localStorage.getItem("email");
+
   ngOnInit() {
   }
 
