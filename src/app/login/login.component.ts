@@ -114,6 +114,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("firstName", res.user.firstname);
         localStorage.setItem("lastName", res.user.lastname);
         localStorage.setItem("role", res.user.role);
+        localStorage.setItem("email", res.user.email);
         this._router.navigate(["/welcome"]);
       },
       err => console.log(err)
@@ -146,6 +147,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("firstName", res.user.firstname);
           localStorage.setItem("lastName", res.user.lastname);
           localStorage.setItem("role", res.user.role);
+          localStorage.setItem("email", res.user.email);
           let welcomeName = localStorage.getItem("firstName");
           this._snackBar.openSnackBar(
             `Admin Login Successful.   The Force is strong with ${welcomeName}.`,
