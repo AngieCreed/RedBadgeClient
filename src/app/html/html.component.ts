@@ -16,39 +16,39 @@ import {
   animations: [
     trigger("slideInOut", [
       transition(":enter", [
-        style({ transform: "translateY(-120%)" }),
-        animate("800ms ease-out", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateY(-180%)" }),
+        animate("800ms 500ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ]),
     trigger("slideInOut2", [
       transition(":enter", [
-        style({ transform: "translateY(-120%)" }),
-        animate("1400ms ease-out", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateY(-180%)" }),
+        animate("1400ms 500ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ]),
     trigger("slideInOut3", [
       transition(":enter", [
-        style({ transform: "translateY(-120%)" }),
-        animate("2000ms ease-out", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateY(-180%)" }),
+        animate("2000ms 500ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ]),
     trigger("slideInOut4", [
       transition(":enter", [
-        style({ transform: "translateY(-120%)" }),
-        animate("2600ms ease-out", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateY(-180%)" }),
+        animate("2600ms 500ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ]),
     trigger("slideInOut5", [
       transition(":enter", [
-        style({ transform: "translateY(-120%)" }),
-        animate("3200ms ease-out", style({ transform: "translateY(0%)" }))
+        style({ transform: "translateY(-180%)" }),
+        animate("3200ms 500ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ])
   ]
 })
 export class HtmlComponent implements OnInit {
-  html="html";
-  title="HTML"
+  html = "html";
+  title = "HTML";
   constructor() {}
 
   ngOnInit() {}
