@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ItemsService } from "../shared/items.service";
 import { Item } from "../shared/item.model";
-import { NotificationsService } from "../shared/notifications.service";
 
 @Component({
   selector: "app-items",
@@ -13,10 +12,7 @@ export class ItemsComponent implements OnInit {
   currentItem: Item;
   id: string = localStorage.getItem("id");
 
-  constructor(
-    private _itemsService: ItemsService,
-    private _ns: NotificationsService
-  ) {}
+  constructor(private _itemsService: ItemsService) {}
 
   ngOnInit() {
     console.log("hello");
@@ -40,7 +36,6 @@ export class ItemsComponent implements OnInit {
     this._itemsService.getall(id).subscribe(items => {
       this.items = items;
     });
-    console.log("hello");
   }
 
   saveItem(item) {
@@ -54,7 +49,6 @@ export class ItemsComponent implements OnInit {
   createItem(item) {
     item.userId = this.id;
     this._itemsService.create(item).subscribe(response => {
-      // this._ns.emit("Item created!");
       this.getItems(this.id);
       this.resetCurrentItem();
     });
@@ -62,7 +56,6 @@ export class ItemsComponent implements OnInit {
 
   updateItem(item) {
     this._itemsService.update(item).subscribe(response => {
-      // this.ns.emit("Item saved!");
       this.getItems(this.id);
       this.resetCurrentItem();
     });
@@ -70,7 +63,6 @@ export class ItemsComponent implements OnInit {
 
   deleteItem(item) {
     this._itemsService.delete(item).subscribe(response => {
-      // this.ns.emit("Item deleted!");
       this.getItems(this.id);
       this.resetCurrentItem();
     });
