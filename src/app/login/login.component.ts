@@ -90,7 +90,8 @@ export class LoginComponent implements OnInit {
             "loginSuccess",
             5000
           );
-          this._router.navigate(["/welcome"]);
+          // this._router.navigate(["/welcome"]);
+          window.location.href = "/welcome";
           // this._ns.emit("Successful Login!");
         },
 
@@ -114,8 +115,9 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("firstName", res.user.firstname);
         localStorage.setItem("lastName", res.user.lastname);
         localStorage.setItem("role", res.user.role);
-        localStorage.setItem("email", res.user.email);
-        this._router.navigate(["/welcome"]);
+         localStorage.setItem("email", res.user.email);
+        // this._router.navigate(["/welcome"]);
+        window.location.href = "/welcome";
       },
       err => console.log(err)
     );
@@ -154,7 +156,8 @@ export class LoginComponent implements OnInit {
             "adminSuccess",
             5000
           );
-          this._router.navigate(["/welcome"]);
+          // this._router.navigate(["/welcome"]);
+          window.location.href = "/welcome";
         },
         err => console.log(err)
       );
