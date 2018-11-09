@@ -36,7 +36,7 @@ testem.log
 Thumbs.db
 
 # dependencies
-node_modules
+# node_modules
 # !node_modules/*
 # !node_modules/@angular/
 # node_modules/@angular/*
@@ -57,12 +57,12 @@ node_modules
 
 
 
-# node_modules/*
-# !node_modules/@angular/
+node_modules/*
+!node_modules/@angular/
 
 #re-include file for custom themeing
 # !node_modules/@angular/material/_theming/
 
-!_theming*./node_modules/@angular/material
+# !_theming*./node_modules/@angular/material
 
 
