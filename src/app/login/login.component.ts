@@ -25,8 +25,15 @@ export class LoginComponent implements OnInit {
   // createLogin: FormGroup;
   // createSignUp: FormGroup;
   loginUserData = { email: "", password: "" };
-  signUpUserData = {};
+  signUpUserData = { 
+    lastname: "",
+    email: "",
+    username: "",
+    password: "",
+    firstname: "",
+};
   loginAdminData = { email: "", password: "" };
+
 
   constructor(
     // private lp: FormBuilder,
