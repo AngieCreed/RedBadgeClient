@@ -57,7 +57,7 @@ Thumbs.db
 
 
 
-node_modules/*
+node_modules
 # !node_modules/@angular/
 
 #re-include file for custom themeing
