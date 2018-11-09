@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
 import { Comment } from "./comment.model";
+import { APIURL } from "../../environments/environment.prod";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -12,7 +13,7 @@ const httpOptions = {
 
 @Injectable()
 export class CommentsService {
-  private _baseUrl = "http://localhost:3000/comment";
+  private _baseUrl = `${APIURL}/comment`;
 
   constructor(private http: HttpClient) {}
 

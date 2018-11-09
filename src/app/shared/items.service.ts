@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
 import { Item } from "./item.model";
+import { APIURL } from "../../environments/environment.prod";
 // import { EmailValidator } from "@angular/forms";
 
 const httpOptions = {
@@ -13,7 +14,7 @@ const httpOptions = {
 
 @Injectable()
 export class ItemsService {
-  private _baseUrl = "http://localhost:3000/item";
+  private _baseUrl = `${APIURL}/item`;
 
   constructor(private http: HttpClient) {}
 
