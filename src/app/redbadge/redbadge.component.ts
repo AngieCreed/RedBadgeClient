@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-redbadge',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./redbadge.component.scss']
 })
 export class RedbadgeComponent implements OnInit {
-
+  @Input() title: string;
   constructor() { }
 
   ngOnInit() {
+    console.log('in rbc, title:',this.title)
   }
 
 }

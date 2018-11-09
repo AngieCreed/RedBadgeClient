@@ -7,14 +7,13 @@ import { Router } from "@angular/router";
   styleUrls: ['./javascript.component.scss']
 })
 export class JavascriptComponent implements OnInit {
-
+  js="js";
+  title="JavaScript"
   constructor() { }
 
   ngOnInit() {
   }
 
 }
-
-
 
 

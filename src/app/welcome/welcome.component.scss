@@ -1,48 +1,53 @@
-.container {
-    // background: lightgray;
-    height: 100vh;
-    background-image: linear-gradient(#53565a, #D9514E);
-   
-}
+// .container {
+//   // background: lightgray;
+//   height: 100vh;
+//   background-image: linear-gradient(#53565a, #d9514e);
+// }
 
 .welcome {
-    padding-top: 6%;
-    margin-bottom: 30px;
+  color: white;
+  padding-top: 15vh;
+  margin-bottom: 2vh;
 }
 
 h1 {
-    text-align: center;
-    width: 100vw;
-    margin: 0;
+  text-align: center;
+  width: 100vw;
+  margin: 0;
 }
 
 .main-content {
-    width: 60vw;
-    margin-left: 20vw;
-    margin-right: 20vw;
+  color: white;
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 
 h3 {
-    text-align: center;
-    font-size: 25px;
-    padding-bottom: 30px;
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 30px;
 }
 
-
 a:link {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 a:visited {
-    color: black;
+  color: black;
 }
 
 button {
-    margin: 0 5%;
+  margin: 0 3%;
 }
 
 .button {
-    text-align: center;
-    padding-bottom: 40px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.welcome-buttons {
+  color: white;
+  border: solid 1px white;
 }

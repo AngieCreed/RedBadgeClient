@@ -1,18 +1,14 @@
-.master-container{
+.master-container {
   padding-top: 2%;
   padding-bottom: 2%;
-  background-image: linear-gradient(#53565a, #D9514E);
+  background-image: linear-gradient(#53565a, #d9514e);
   color: white;
-  
-  
 }
 
 .mat-card-title {
   font-size: 18px;
   text-align: center;
-  
 }
-
 
 p {
   font-size: 12px;
@@ -23,7 +19,6 @@ h1 {
   text-align: center;
   padding-top: 4%;
   font-weight: 700;
-
 }
 
 h2 {
@@ -42,80 +37,78 @@ h2 {
 h4 {
   text-align: center;
   margin-bottom: 2%;
-  
 }
 
 .video {
   display: flex;
-  width: 70vw;
+  // width: 70vw;
   margin-left: 15vw;
   margin-right: 15vw;
   margin-bottom: 3%;
   padding-top: 1%;
-
 }
 
+.example-card {
+  max-width: 200px;
+  max-height: 400px;
+  filter: drop-shadow(0 0 0.75rem darkgray);
+  background-color: lightgray;
+  border-radius: 10px;
+  transition: all 0.8s;
+}
 
-  .example-card {
-    max-width: 200px;
-    max-height: 400px;
-    filter: drop-shadow(0 0 0.75rem darkgray);
-    background-color: lightgray;
-    border-radius: 10px;
-   
-  }
+.example-card:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.1);
+}
 
-  .example-card:hover {
-    -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.1);
-  }
+.example-cardI {
+  max-width: 200px;
+  max-height: 400px;
+  margin-left: 1em;
+  filter: drop-shadow(0 0 0.75rem darkgray);
+  background-color: lightgray;
+  border-radius: 10px;
+  transition: all 0.8s;
+}
 
-  .example-cardI {
-    max-width: 200px;
-    max-height: 400px;
-    margin-left: 1em;
-    filter: drop-shadow(0 0 0.75rem darkgray);
-    background-color: lightgray;
-    border-radius: 10px;
-  }
+.example-cardI:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.1);
+}
 
-  .example-cardI:hover {
-    -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.1);
-  }
-   
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
 
- table {
+table {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   // box-shadow: 2px 4px 20px #f0f0f0;
-  opacity: .8;
+  opacity: 0.8;
   border-radius: 15px;
   // background-color: #63666b;
   background-image: radial-gradient(rgb(151, 148, 148), black);
   border-style: outset;
   border-width: 3px;
   width: 60vw;
-  filter: drop-shadow(0 0 0.50rem lightgray);
- }
-
-  th, td {
-    // border-bottom: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    width: 25vw;
+  filter: drop-shadow(0 0 0.5rem lightgray);
 }
 
+th,
+td {
+  // border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  width: 25vw;
+}
 
 tr:hover {
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .ctr {
