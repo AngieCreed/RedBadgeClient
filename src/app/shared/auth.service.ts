@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
 import { EmailValidator } from "@angular/forms";
 import { Router } from "@angular/router";
+import { APIURL } from "../../environments/environment.prod"
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -23,10 +24,10 @@ let id = localStorage.getItem("user.id");
 @Injectable()
 export class AuthService {
   private id = localStorage.getItem("id");
-  private _loginUrl = "http://localhost:3000/user/login";
-  private _loginAdminUrl = "http://localhost:3000/user/login/admin";
-  private _signUpUrl = "http://localhost:3000/user/signup";
-  // private _deleteUsernameUrl = `http://localhost:3000/user/${this.id}/delete`;
+  private _loginUrl = `${APIURL}/user/login`;
+  private _loginAdminUrl = `${APIURL}/user/login/admin`;
+  private _signUpUrl = `${APIURL}/user/signup`;
+  // private _deleteUsernameUrl = `${APIURL}/user/${this.id}/delete`;
 
   constructor(
     private http: HttpClient, 
@@ -44,7 +45,7 @@ export class AuthService {
 
   editUsername(user) {
     let id = localStorage.getItem("id");
-    let _updateUsernameUrl = `http://localhost:3000/user/${id}/update`;
+    let _updateUsernameUrl = `${APIURL}/user/${id}/update`;
     return this.http.put<any>(
       _updateUsernameUrl,
       { user },
@@ -54,7 +55,7 @@ export class AuthService {
 
   deleteUser() {
     let id = localStorage.getItem("id");
-    let _deleteUsernameUrl = `http://localhost:3000/user/${id}/delete`;
+    let _deleteUsernameUrl = `${APIURL}/user/${id}/delete`;
     console.log("this._deleteUsernameUrl:", _deleteUsernameUrl);
     return this.http.delete<any>(_deleteUsernameUrl, httpOptionsAuth);
   }
