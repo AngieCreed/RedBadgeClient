@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "../shared/auth.service";
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
@@ -6,7 +6,8 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 @Component({
   selector: "app-editusername",
   templateUrl: "./editusername.component.html",
-  styleUrls: ["./editusername.component.scss"]
+  styleUrls: ["./editusername.component.scss"],
+  encapsulation: ViewEncapsulation.None,
 })
 export class EditusernameComponent implements OnInit {
   user = {
