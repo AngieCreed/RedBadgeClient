@@ -6,5 +6,5 @@ switch (window.location.hostname) {
   case 'bootcampfootlocker-client.herokuapp.com/':
     APIURL = 'https://bootcampfootlocker-server.herokuapp.com/';
     break;
-  default: APIURL = 'http://localhost:3000';
+  default: APIURL = 'https://bootcampfootlocker-server.herokuapp.com';
 }
