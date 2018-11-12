@@ -1,10 +1,11 @@
-export const environment = {production: true};
+export const environment = { production: true };
 
-export let APIURL = '';
+export let APIURL = "";
 
 switch (window.location.hostname) {
-  case 'bootcampfootlocker-client.herokuapp.com/':
-    APIURL = 'https://bootcampfootlocker-server.herokuapp.com/';
+  case "bootcampfootlocker-client.herokuapp.com/":
+    APIURL = "https://bootcampfootlocker-server.herokuapp.com/";
     break;
-  default: APIURL = 'https://bootcampfootlocker-server.herokuapp.com';
+  default:
+    APIURL = "http://localhost:3000";
 }

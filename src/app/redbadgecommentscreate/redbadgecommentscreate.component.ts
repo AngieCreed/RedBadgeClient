@@ -20,6 +20,8 @@ export class RedbadgecommentscreateComponent implements OnInit {
 
   @Output()
   posted = new EventEmitter();
+  @Output()
+  resetCurrentComment = new EventEmitter();
 
   @Input()
   set currentComment(obj: Comment) {

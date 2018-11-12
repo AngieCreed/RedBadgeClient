@@ -10,8 +10,6 @@ export class RedbadgecommentslistComponent implements OnInit {
   role: string = localStorage.getItem("role");
   @Input()
   comments: Comment[];
-  @Input()
-  getCommentsParent: any;
   @Input() title: string;
 
   @Output()

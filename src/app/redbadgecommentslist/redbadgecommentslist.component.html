@@ -7,8 +7,14 @@
   <mat-card-content>
     <mat-list>
       <mat-list-item class="comment" *ngFor="let comment of comments">
-        <p class="comments" mat-line>{{comment.username}}:{{comment.content}}</p>
-        <button *ngIf="isAdmin()" mat-icon-button (click)="deleted.emit(comment)">
+        <p class="comments" mat-line>
+          {{ comment.username }}:&nbsp;&nbsp;{{ comment.content }}
+        </p>
+        <button
+          *ngIf="isAdmin()"
+          mat-icon-button
+          (click)="deleted.emit(comment)"
+        >
           <mat-icon>delete_forever</mat-icon>
         </button>
       </mat-list-item>

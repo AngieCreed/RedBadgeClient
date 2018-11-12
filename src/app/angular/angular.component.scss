@@ -57,6 +57,10 @@ h4 {
   transition: all 0.8s;
 }
 
+.example-card img {
+  border-radius: 10px;
+}
+
 .example-card:hover {
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
@@ -71,6 +75,10 @@ h4 {
   background-color: lightgray;
   border-radius: 10px;
   transition: all 0.8s;
+}
+
+.example-cardI img {
+  border-radius: 10px;
 }
 
 .example-cardI:hover {
