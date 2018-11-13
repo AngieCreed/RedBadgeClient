@@ -1,15 +1,29 @@
 <mat-card class="card-container">
   <form (submit)="posted.emit(newComment)" class="form-container">
-    <mat-card-content class="commentcreate-cardcontent">
+    <mat-card-content class="commentcreate-cardcontent indent">
       <mat-form-field>
-        <input matInput placeholder="create comment here" [(ngModel)]="newComment.content" type="text" name="content">
+        <input
+          matInput
+          placeholder="create comment here"
+          [(ngModel)]="newComment.content"
+          type="text"
+          name="content"
+        />
       </mat-form-field>
     </mat-card-content>
 
     <mat-card-actions class="commentcreate-button-container">
-      <button mat-raised-button type="submit" class="commentcreate-button">Post</button>
-
-
+      <button mat-raised-button type="submit" class="commentcreate-button">
+        Post
+      </button>
+      <button
+        mat-raised-button
+        class="commentcreate-button"
+        type="button"
+        (click)="resetCurrentComment.emit()"
+      >
+        Clear
+      </button>
     </mat-card-actions>
   </form>
 </mat-card>
