@@ -1,37 +1,14 @@
-.entire {
-  // background-color: var(--second);
-  display: flex;
-  justify-content: space-around;
-  height: 100vh;
-}
-
 .left-side {
   color: white;
-  width: 500px;
   border-radius: 5px;
   border: 3px solid var(--eighth);
   border-style: outset;
-  margin-top: 150px;
-  height: 500px;
+  margin: 125px 5% 0 5%;
   background-color: dimgray;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .login-container {
-  // border-radius: 5px;
-  // border: solid hsl(500, 300, 900) 2px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.signup-form {
-  display: flex;
-  flex-direction: column;
 }
 
 .login-button-container {
@@ -55,35 +32,20 @@
 }
 
 .signup-container {
-  // border-radius: 5px;
-  // border: solid hsl(500, 300, 900) 2px;
-  display: flex;
-  flex-direction: column;
   padding: 20px;
-  // width: 90%;
 }
 
 .right-side {
   color: white;
-  width: 500px;
   border-radius: 5px;
   border: 3px solid var(--eighth);
   border-style: outset;
-  margin-top: 200px;
-  height: 300px;
+  margin: 100px 5% 125px 5%;
   background-color: dimgray;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .admin-container {
-  // border-radius: 5px;
-  // border: solid hsl(500, 300, 900) 2px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.admin-form {
-  display: flex;
-  flex-direction: column;
 }
 
 .mat-form-field-label {
@@ -98,21 +60,54 @@
 .mat-tab-label {
   color: white !important;
 }
-.loginFail .mat-simple-snackbar{
-  color: #D9514E;
+.loginFail .mat-simple-snackbar {
+  color: #d9514e;
 }
 snack-bar-container.loginFail {
   background: #f8fbff;
 }
-.loginSuccess .mat-simple-snackbar{
+.loginSuccess .mat-simple-snackbar {
   color: #f8fbff;
 }
 snack-bar-container.loginSuccess {
   background: #8acfba;
 }
-.adminSuccess .mat-simple-snackbar{
+.adminSuccess .mat-simple-snackbar {
   color: #f8fbff;
 }
 snack-bar-container.adminSuccess {
-  background: #F79569;
+  background: #f79569;
+}
+
+@media (min-width: 700px) {
+  .left-side {
+    margin: 125px 10% 0 10%;
+  }
+
+  .right-side {
+    margin: 100px 10% 125px 10%;
+  }
+}
+
+@media (min-width: 960px) {
+  .left-side {
+    margin: 200px 0 0 0;
+    min-width: 350px;
+  }
+
+  .right-side {
+    margin: 200px 0 0 0;
+    min-width: 350px;
+    height: 280px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .left-side {
+    min-width: 475px;
+  }
+
+  .right-side {
+    min-width: 475px;
+  }
 }

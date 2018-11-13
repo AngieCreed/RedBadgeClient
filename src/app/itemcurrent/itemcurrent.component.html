@@ -2,26 +2,55 @@
   <mat-card-header>
     <mat-card-title>
       <h1>
-        <span *ngIf="selectedItem.id; else prompt">Edit Item:<br>{{currentName}}</span>
-        <ng-template #prompt>Create New Item:<br></ng-template>
+        <span *ngIf="selectedItem.id; else: prompt"
+          >Edit Item:<br />{{ currentName }}</span
+        >
+        <ng-template #prompt>Create New Item:<br /></ng-template>
       </h1>
     </mat-card-title>
   </mat-card-header>
   <form (submit)="saved.emit(selectedItem)">
-    <mat-card-content class="itemcurrent-cardcontent">
+    <mat-card-content class="itemcurrent-cardcontent" fxLayout="column">
       <mat-form-field>
-        <input matInput placeholder="Title" [(ngModel)]="selectedItem.title" type="text" name="title">
+        <input
+          matInput
+          placeholder="Title"
+          [(ngModel)]="selectedItem.title"
+          type="text"
+          name="title"
+        />
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Resource URL" [(ngModel)]="selectedItem.resource" type="text" name="resource">
+        <input
+          matInput
+          placeholder="Resource URL"
+          [(ngModel)]="selectedItem.resource"
+          type="text"
+          name="resource"
+        />
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Comment" [(ngModel)]="selectedItem.comment" type="text" name="comment">
+        <input
+          matInput
+          placeholder="Comment"
+          [(ngModel)]="selectedItem.comment"
+          type="text"
+          name="comment"
+        />
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions class="itemcurrent-buttons">
-      <button mat-raised-button type="submit" class="itemcurrent-button">Save</button>
-      <button mat-raised-button type="button" class="itemcurrent-button" (click)="cancelled.emit(selectedItem)">Cancel</button>
+      <button mat-raised-button type="submit" class="itemcurrent-button">
+        Save
+      </button>
+      <button
+        mat-raised-button
+        type="button"
+        class="itemcurrent-button"
+        (click)="cancelled.emit(selectedItem)"
+      >
+        Cancel
+      </button>
     </mat-card-actions>
   </form>
 </mat-card>

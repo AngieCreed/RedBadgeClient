@@ -1,9 +1,7 @@
 <mat-toolbar class="nav">
   <mat-toolbar-row class="navbar-shadow">
     <span class="title">
-      <a [routerLink]="['/welcome']">
-        <img src="assets/img/pic1.png">
-      </a>
+      <a [routerLink]="['/welcome']"> <img src="assets/img/pic1.png" /> </a>
     </span>
     <span class="example-spacer"></span>
 
@@ -31,10 +29,18 @@
       <button mat-menu-item routerLink="/items">My Footlocker</button>
     </mat-menu>
 
-    <button mat-button (click)="showLoginOrLogout()" [matMenuTriggerFor]="account">Account</button>
+    <button
+      mat-button
+      (click)="showLoginOrLogout()"
+      [matMenuTriggerFor]="account"
+    >
+      Account
+    </button>
     <mat-menu #account="matMenu">
       <button mat-menu-item routerLink="/account">Account</button>
-      <button *ngIf="hasToken" mat-menu-item (click)="userLogout()">Log Out</button>
+      <button *ngIf="hasToken" mat-menu-item (click)="userLogout()">
+        Log Out
+      </button>
       <button *ngIf="!hasToken" mat-menu-item routerLink="/">Log In</button>
     </mat-menu>
   </mat-toolbar-row>

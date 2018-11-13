@@ -1,20 +1,11 @@
 .footlocker-items {
-  // border: 1px solid black;
-  // display: flex;
-  // justify-content: center;
-  margin: 150px 0 100px 0;
+  margin: 150px 5% 5% 5%;
   border-radius: 5px;
-  // box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.2);
   filter: drop-shadow(0 0 0.75rem darkgray);
   box-shadow: 2px 4px 20px #f0f0f0;
   border-style: outset;
   border-width: 3px;
-  width: 700px;
   min-height: 500px;
-  // border: solid var(--ninth) 2px;
-  // background-color: whitesmoke;
-  padding-top: 2%;
-  padding-bottom: 2%;
   background-color: #53565a;
   color: white;
 }
@@ -38,4 +29,17 @@
 
 .mat-list-item p {
   padding: 5px;
+}
+
+@media (min-width: 959px) {
+  .footlocker-items {
+    margin: 150px 10% 5% 10%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footlocker-items {
+    margin: 150px 0 5% 0;
+    min-width: 550px;
+  }
 }
