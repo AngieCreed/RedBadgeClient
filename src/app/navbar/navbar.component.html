@@ -4,6 +4,9 @@
       <a [routerLink]="['/welcome']">
         <img src="assets/img/pic1.png">
       </a>
+      <div class="name" *ngIf="hasToken">
+        Coder: {{ firstName }} {{lastName}}
+      </div>
     </span>
     <span class="example-spacer"></span>
 

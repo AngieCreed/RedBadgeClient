@@ -16,9 +16,8 @@ export class NavbarComponent implements OnInit {
     ) {}
   hasToken: boolean=false;
   token: string=localStorage.getItem("token");
-  
+  name: string=localStorage.getItem("firstName");
  
-
   ngOnInit() {
     console.log("this.token, ngOnInit:",this.hasToken);
 
