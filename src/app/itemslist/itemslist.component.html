@@ -1,15 +1,14 @@
 <!-- <div class="footlocker-items"> -->
 <mat-card class="footlocker-items">
   <mat-card-header>
-    <mat-card-title>
-      <h1>My Footlocker Items:</h1>
-    </mat-card-title>
+    <mat-card-title> <h1>My Footlocker Items:</h1> </mat-card-title>
   </mat-card-header>
   <mat-card-content *ngIf="items">
     <mat-list [@fadeIn]="items.length">
       <mat-list-item class="item" *ngFor="let item of items">
-
-        <h3 class="items" mat-line><a href="{{item.resource}}">{{item.title}}</a></h3>
+        <h3 class="items" mat-line>
+          <a href="{{item.resource}}">{{ item.title }}</a>
+        </h3>
 
         <button mat-icon-button (click)="selected.emit(item)">
           <mat-icon>edit</mat-icon>
@@ -18,11 +17,9 @@
           <mat-icon>delete_forever</mat-icon>
         </button>
         <p class="items" mat-line>
-          Resource URL: <a href="{{item.resource}}">{{item.resource}}</a>
+          Resource URL: <a href="{{item.resource}}">{{ item.resource }}</a>
         </p>
-        <p class="items" mat-line>
-          Comment: {{item.comment}}
-        </p>
+        <p class="items" mat-line>Comment: {{ item.comment }}</p>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
