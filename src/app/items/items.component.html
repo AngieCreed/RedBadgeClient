@@ -1,9 +1,20 @@
-<div class="items-container">
-
-  <app-itemcurrent [item]="currentItem" (saved)="saveItem($event)" (cancelled)="cancel($event)">
+<div
+  class="items-container"
+  fxLayout.lt-lg="column"
+  fxLayoutAlign="space-around"
+>
+  <app-itemcurrent
+    [item]="currentItem"
+    (saved)="saveItem($event)"
+    (cancelled)="cancel($event)"
+  >
   </app-itemcurrent>
 
-  <app-itemslist [items]="items" (selected)="selectItem($event)" (deleted)="deleteItem($event)" [getItemsParent]="getItems">
+  <app-itemslist
+    [items]="items"
+    (selected)="selectItem($event)"
+    (deleted)="deleteItem($event)"
+    [getItemsParent]="getItems"
+  >
   </app-itemslist>
-
 </div>

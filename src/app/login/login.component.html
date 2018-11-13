@@ -1,23 +1,33 @@
-<div class="entire">
-
-
-
+<div class="entire" fxLayout.lt-md="column" fxLayoutAlign="space-around">
   <div @fade class="left-side">
-
-
     <mat-tab-group>
       <mat-tab label="Login">
         <div class="login-container">
-          <form (ngSubmit)="loginUser()" class="login-form">
+          <form (ngSubmit)="loginUser()" class="login-form" fxLayout="column">
             <mat-form-field>
-              <input matInput placeholder="Email" [(ngModel)]="loginUserData.email" type="email" name="email" required>
+              <input
+                matInput
+                placeholder="Email"
+                [(ngModel)]="loginUserData.email"
+                type="email"
+                name="email"
+                required
+              />
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Password" [(ngModel)]="loginUserData.password" type="password" name="password"
-                required>
+              <input
+                matInput
+                placeholder="Password"
+                [(ngModel)]="loginUserData.password"
+                type="password"
+                name="password"
+                required
+              />
             </mat-form-field>
             <div class="login-button-container">
-              <button class="login-button" mat-raised-button type="submit">Login!</button>
+              <button class="login-button" mat-raised-button type="submit">
+                Login!
+              </button>
             </div>
           </form>
         </div>
@@ -25,24 +35,56 @@
 
       <mat-tab label="Register">
         <div class="signup-container">
-          <form (ngSubmit)="signUpUser()" class="signup-form">
+          <form (ngSubmit)="signUpUser()" class="signup-form" fxLayout="column">
             <mat-form-field>
-              <input matInput [(ngModel)]="signUpUserData.firstname" type="text" placeholder="First Name" name="firstname">
+              <input
+                matInput
+                [(ngModel)]="signUpUserData.firstname"
+                type="text"
+                placeholder="First Name"
+                name="firstname"
+              />
             </mat-form-field>
             <mat-form-field>
-              <input matInput [(ngModel)]="signUpUserData.lastname" type="text" placeholder="Last Name" name="lastname">
+              <input
+                matInput
+                [(ngModel)]="signUpUserData.lastname"
+                type="text"
+                placeholder="Last Name"
+                name="lastname"
+              />
             </mat-form-field>
             <mat-form-field>
-              <input matInput [(ngModel)]="signUpUserData.email" type="email" placeholder="Email" name="email">
+              <input
+                matInput
+                [(ngModel)]="signUpUserData.email"
+                type="email"
+                placeholder="Email"
+                name="email"
+              />
             </mat-form-field>
             <mat-form-field>
-              <input matInput [(ngModel)]="signUpUserData.username" type="text" placeholder="Username" name="username">
+              <input
+                matInput
+                [(ngModel)]="signUpUserData.username"
+                type="text"
+                placeholder="Username"
+                name="username"
+              />
             </mat-form-field>
             <mat-form-field>
-              <input matInput [(ngModel)]="signUpUserData.password" type="password" placeholder="Password" name="password">
+              <input
+                matInput
+                [(ngModel)]="signUpUserData.password"
+                type="password"
+                placeholder="Password"
+                name="password"
+              />
             </mat-form-field>
             <div class="signup-button-container">
-              <button class="signup-button" mat-raised-button type="submit">Create!</button>
+              <button class="signup-button" mat-raised-button type="submit">
+                Create!
+              </button>
             </div>
           </form>
         </div>
@@ -54,16 +96,31 @@
     <mat-tab-group>
       <mat-tab label="Admin Login">
         <div class="admin-container">
-          <form (ngSubmit)="loginAdmin()" class="admin-form">
+          <form (ngSubmit)="loginAdmin()" class="admin-form" fxLayout="column">
             <mat-form-field>
-              <input matInput placeholder="Email" [(ngModel)]="loginAdminData.email" type="email" name="email" required>
+              <input
+                matInput
+                placeholder="Email"
+                [(ngModel)]="loginAdminData.email"
+                type="email"
+                name="email"
+                required
+              />
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Password" [(ngModel)]="loginAdminData.password" type="password" name="password"
-                required>
+              <input
+                matInput
+                placeholder="Password"
+                [(ngModel)]="loginAdminData.password"
+                type="password"
+                name="password"
+                required
+              />
             </mat-form-field>
             <div class="login-button-container">
-              <button class="login-button" mat-raised-button type="submit">Login!</button>
+              <button class="login-button" mat-raised-button type="submit">
+                Login!
+              </button>
             </div>
           </form>
         </div>
