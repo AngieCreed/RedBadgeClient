@@ -12,20 +12,37 @@ import { DeleteuserComponent } from "./deleteuser/deleteuser.component";
 import { AccountComponent } from "./account/account.component";
 import { RedbadgeComponent } from "./redbadge/redbadge.component";
 import { AngularComponent } from "./angular/angular.component";
+import { AuthGuard } from "./auth.guard";
 
 const routes: Routes = [
   { path: "", component: LoginComponent },
-  { path: "welcome", component: WelcomeComponent },
-  { path: "goldbadge", component: GoldbadgeComponent },
-  { path: "css", component: CssComponent },
-  { path: "html", component: HtmlComponent },
-  { path: "javascript", component: JavascriptComponent },
-  { path: "items", component: ItemsComponent },
-  { path: "editusername", component: EditusernameComponent },
-  { path: "deleteuser", component: DeleteuserComponent },
-  { path: "account", component: AccountComponent },
-  { path: "redbadge", component: RedbadgeComponent },
-  { path: "angular", component: AngularComponent }
+  { path: "welcome", component: WelcomeComponent, canActivate: [AuthGuard] },
+  {
+    path: "goldbadge",
+    component: GoldbadgeComponent,
+    canActivate: [AuthGuard]
+  },
+  { path: "css", component: CssComponent, canActivate: [AuthGuard] },
+  { path: "html", component: HtmlComponent, canActivate: [AuthGuard] },
+  {
+    path: "javascript",
+    component: JavascriptComponent,
+    canActivate: [AuthGuard]
+  },
+  { path: "items", component: ItemsComponent, canActivate: [AuthGuard] },
+  {
+    path: "editusername",
+    component: EditusernameComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "deleteuser",
+    component: DeleteuserComponent,
+    canActivate: [AuthGuard]
+  },
+  { path: "account", component: AccountComponent, canActivate: [AuthGuard] },
+  { path: "redbadge", component: RedbadgeComponent, canActivate: [AuthGuard] },
+  { path: "angular", component: AngularComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

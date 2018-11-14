@@ -16,19 +16,19 @@ import { SnackbarService } from "../shared/snackbar.service";
     trigger("fade", [
       transition(":enter", [
         style({ transform: "translateY(200%)" }),
-        animate("1200ms 500ms ease-out", style({ transform: "translateX(0%)" }))
+        animate("1400ms 500ms ease-out", style({ transform: "translateX(0%)" }))
       ])
     ]),
     trigger("slide", [
       transition(":enter", [
         style({ transform: "translateX(200%)" }),
-        animate("1200ms 500ms ease-out", style({ transform: "translateY(0%)" }))
+        animate("1400ms 500ms ease-out", style({ transform: "translateY(0%)" }))
       ])
     ]),
     trigger("fade2", [
       transition("void => *", [
         style({ backgroundColor: "var(--ninth)", opacity: 0 }),
-        animate(2000, style({ backgroundColor: "dimgray", opacity: 1 }))
+        animate(2500, style({ backgroundColor: "dimgray", opacity: 1 }))
       ])
     ])
   ]
