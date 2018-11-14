@@ -14,6 +14,18 @@ import { SnackbarService } from "../shared/snackbar.service";
   encapsulation: ViewEncapsulation.None,
   animations: [
     trigger("fade", [
+      transition(":enter", [
+        style({ transform: "translateY(200%)" }),
+        animate("1200ms 500ms ease-out", style({ transform: "translateX(0%)" }))
+      ])
+    ]),
+    trigger("slide", [
+      transition(":enter", [
+        style({ transform: "translateX(200%)" }),
+        animate("1200ms 500ms ease-out", style({ transform: "translateY(0%)" }))
+      ])
+    ]),
+    trigger("fade2", [
       transition("void => *", [
         style({ backgroundColor: "var(--ninth)", opacity: 0 }),
         animate(2000, style({ backgroundColor: "dimgray", opacity: 1 }))
@@ -25,15 +37,14 @@ export class LoginComponent implements OnInit {
   // createLogin: FormGroup;
   // createSignUp: FormGroup;
   loginUserData = { email: "", password: "" };
-  signUpUserData = { 
+  signUpUserData = {
     lastname: "",
     email: "",
     username: "",
     password: "",
-    firstname: "",
-};
+    firstname: ""
+  };
   loginAdminData = { email: "", password: "" };
-
 
   constructor(
     // private lp: FormBuilder,
@@ -122,7 +133,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("firstName", res.user.firstname);
         localStorage.setItem("lastName", res.user.lastname);
         localStorage.setItem("role", res.user.role);
-         localStorage.setItem("email", res.user.email);
+        localStorage.setItem("email", res.user.email);
         // this._router.navigate(["/welcome"]);
         window.location.href = "/welcome";
       },

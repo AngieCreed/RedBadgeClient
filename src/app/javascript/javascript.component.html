@@ -1,125 +1,165 @@
 <div class="master-container">
-    <div>
-      <h1>JavaScript Resources</h1>
-      
-    </div>
-    <div>
-      <h2>Videos</h2>
-     </div>
-     <div class="video">
-        <mat-card class="example-card">
-            <a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target="_blank"><img mat-card-image src="../../assets/img/js1.png" alt="Image of JavaScript"></a>
-            <mat-card-title>Introduction to JavaScript for Beginners</mat-card-title>
-            <mat-card-content>
-              <p>
-                By Mosh Hamedani 
-              </p>
-            </mat-card-content>
-          </mat-card>
-          <mat-card class="example-cardI">
-              <a href="https://www.youtube.com/watch?v=qoSksQ4s_hg&index=1&list=PL4cUxeGkcC9i9Ae2D9Ee1RvylH38dKuET" target="_blank"><img mat-card-image src="../../assets/img/js2.png" alt="Image of JavaScript"></a>
-              <mat-card-title>JavaScript For Beginners</mat-card-title>
-              <mat-card-content>
-                <p>
-                    By Net Ninja
-                </p>
-              </mat-card-content>
-            </mat-card>
-            
-              <mat-card class="example-cardI">
-                  <a href="https://www.youtube.com/watch?v=ZpU3mEaK0_w" target="_blank"><img mat-card-image src="../../assets/img/js3.png" alt="Image of JavaScript"></a>
-                  <mat-card-title>JavaScript Introduction</mat-card-title>
-                  <mat-card-content>
-                    <p>
-                     By Maximilian Schwarzmuller
-                    </p>
-                  </mat-card-content>
-                </mat-card>
-                <mat-card class="example-cardI">
-                    <a href="https://www.youtube.com/watch?v=UOeofWla8mE" target="_blank"><img mat-card-image src="../../assets/img/js4.png" alt="Image of JavaScript"></a>
-                    <mat-card-title>Beginnerss Guide To JavaScript</mat-card-title>
-                    <mat-card-content>
-                      <p>
-                        By Treehouse
-                      </p>
-                    </mat-card-content>
-                  </mat-card>
-                <mat-card class="example-cardI">
-                    <a href="https://www.youtube.com/watch?v=_y9oxzTGERs" target="_blank"><img mat-card-image src="../../assets/img/js5.png" alt="Image of JavaScript"></a>
-                    <mat-card-title>Learn Javascript - Full Course for Beginners</mat-card-title>
-                    <mat-card-content>
-                      <p>
-                        By freeCodeCamp
-                      </p>
-                    </mat-card-content>
-                  </mat-card>
-     </div>
-    <div>
-      <h2>Readings</h2>
-    </div>
-    
-      <table>
-        <thead>
-          <tr>
-            <td class="ctr-head"><b>Type</b></td>
-            <td class="ctr-head"><b>Location</b></td>
-            <td class="ctr-head"><b>Description</b></td>
+  <div><h1>JavaScript Resources</h1></div>
+  <div><h2>Videos</h2></div>
+  <div class="video">
+    <mat-card @slideInOut class="example-card">
+      <a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target="_blank"
+        ><img
+          mat-card-image
+          src="../../assets/img/js1.png"
+          alt="Image of JavaScript"
+      /></a>
+      <mat-card-title>Introduction to JavaScript for Beginners</mat-card-title>
+      <mat-card-content> <p>By Mosh Hamedani</p> </mat-card-content>
+    </mat-card>
+    <mat-card @slideInOut2 class="example-cardI">
+      <a
+        href="https://www.youtube.com/watch?v=qoSksQ4s_hg&index=1&list=PL4cUxeGkcC9i9Ae2D9Ee1RvylH38dKuET"
+        target="_blank"
+        ><img
+          mat-card-image
+          src="../../assets/img/js2.png"
+          alt="Image of JavaScript"
+      /></a>
+      <mat-card-title>JavaScript For Beginners</mat-card-title>
+      <mat-card-content> <p>By Net Ninja</p> </mat-card-content>
+    </mat-card>
+
+    <mat-card @slideInOut3 class="example-cardI">
+      <a href="https://www.youtube.com/watch?v=ZpU3mEaK0_w" target="_blank"
+        ><img
+          mat-card-image
+          src="../../assets/img/js3.png"
+          alt="Image of JavaScript"
+      /></a>
+      <mat-card-title>JavaScript Introduction</mat-card-title>
+      <mat-card-content> <p>By Maximilian Schwarzmuller</p> </mat-card-content>
+    </mat-card>
+    <mat-card @slideInOut4 class="example-cardI">
+      <a href="https://www.youtube.com/watch?v=UOeofWla8mE" target="_blank"
+        ><img
+          mat-card-image
+          src="../../assets/img/js4.png"
+          alt="Image of JavaScript"
+      /></a>
+      <mat-card-title>Beginnerss Guide To JavaScript</mat-card-title>
+      <mat-card-content> <p>By Treehouse</p> </mat-card-content>
+    </mat-card>
+    <mat-card @slideInOut5 class="example-cardI">
+      <a href="https://www.youtube.com/watch?v=_y9oxzTGERs" target="_blank"
+        ><img
+          mat-card-image
+          src="../../assets/img/js5.png"
+          alt="Image of JavaScript"
+      /></a>
+      <mat-card-title
+        >Learn Javascript - Full Course for Beginners</mat-card-title
+      >
+      <mat-card-content> <p>By freeCodeCamp</p> </mat-card-content>
+    </mat-card>
+  </div>
+  <div><h2>Readings</h2></div>
+
+  <table>
+    <thead>
+      <tr>
+        <td class="ctr-head"><b>Type</b></td>
+        <td class="ctr-head"><b>Location</b></td>
+        <td class="ctr-head"><b>Description</b></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ctr">CSS Tutorial</td>
+        <td class="ctr">
+          <a href="https://www.w3schools.com/js/default.asp" target="_blank"
+            >w3schools.com</a
+          >
+        </td>
+        <td>JavaScript Tutorial</td>
+      </tr>
+      <tr>
+        <td class="ctr">Introduction to JavaScript</td>
+        <td class="ctr">
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
+            target="_blank"
+            >MDN Web Docs - CSS</a
+          >
+        </td>
+        <td>Comprehensive JavaScript Tutorial For Beginners</td>
+      </tr>
+      <tr>
+        <td class="ctr">Basic JavaScript</td>
+        <td class="ctr">
+          <a
+            href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript"
+            target="_blank"
+            >freeCodeCamp</a
+          >
+        </td>
+        <td>Hands-On JavaScript Practice</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div><h2>Online Training</h2></div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <td class="ctr-head"><b>Site</b></td>
+          <td class="ctr-head"><b>Content</b></td>
+          <td class="ctr-head"><b>Description</b></td>
         </tr>
-        </thead>
-        <tbody>
-          
-            <tr>
-              <td class="ctr">CSS Tutorial</td>
-              <td class="ctr"><a href="https://www.w3schools.com/js/default.asp" target="_blank">w3schools.com</a></td>
-              <td>JavaScript Tutorial</td>
-            </tr>
-            <tr>
-              <td class="ctr">Introduction to JavaScript</td>
-              <td class="ctr"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" target="_blank">MDN Web Docs - CSS</a></td>
-              <td>Comprehensive JavaScript Tutorial For Beginners</td>
-            </tr>
-            <tr>
-              <td class="ctr">Basic JavaScript</td>
-              <td class="ctr"><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript" target="_blank">freeCodeCamp</a></td>
-              <td>Hands-On JavaScript Practice </td>
-            </tr>
-        </tbody>
-      </table>
-    
-    <div>
-        <h2>Online Training</h2>
-    </div>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <td class="ctr-head"><b>Site</b></td>
-              <td class="ctr-head"><b>Content</b></td>
-              <td class="ctr-head"><b>Description</b></td>
-          </tr>
-          </thead>
-          <tbody>
-              <tr>
-                <td class="ctr"><a href="https://www.codewars.com/dashboard" target="_blank">Code Wars</a></td>
-                <td class="ctr">JavaScript Code Challenges</td>
-                <td>Developers train with each other and help each other get better through practice</td>
-              </tr>
-              <tr>
-                  <td class="ctr"><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Codecademy</a></td>
-                <td class="ctr">Introduction To JavaScript</td>
-                <td>Learn the JavaScript fundamentals you'll need for front-end or back-end development</td>
-              </tr>
-              <tr>
-                  <td class="ctr"><a href="https://www.udemy.com/the-complete-javascript-course/" target="_blank">Udemy</a></td>
-                <td class="ctr">The Complete JavaScript Course 2018</td>
-                <td>26.5 Hours of Video Lessons</td>
-              </tr>
-          </tbody>
-        </table>
-        <h2 >The Docs!</h2>
-        <h4>Your best resource for anything JavaScript is the MDN Web Docs.</h4>
-      </div>
-      <div>
-      <app-redbadgecomments [mLocation]='js' [title]='title'></app-redbadgecomments>
-      </div>  
-    </div>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ctr">
+            <a href="https://www.codewars.com/dashboard" target="_blank"
+              >Code Wars</a
+            >
+          </td>
+          <td class="ctr">JavaScript Code Challenges</td>
+          <td>
+            Developers train with each other and help each other get better
+            through practice
+          </td>
+        </tr>
+        <tr>
+          <td class="ctr">
+            <a
+              href="https://www.codecademy.com/learn/introduction-to-javascript"
+              target="_blank"
+              >Codecademy</a
+            >
+          </td>
+          <td class="ctr">Introduction To JavaScript</td>
+          <td>
+            Learn the JavaScript fundamentals you'll need for front-end or
+            back-end development
+          </td>
+        </tr>
+        <tr>
+          <td class="ctr">
+            <a
+              href="https://www.udemy.com/the-complete-javascript-course/"
+              target="_blank"
+              >Udemy</a
+            >
+          </td>
+          <td class="ctr">The Complete JavaScript Course 2018</td>
+          <td>26.5 Hours of Video Lessons</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>The Docs!</h2>
+    <h4>Your best resource for anything JavaScript is the MDN Web Docs.</h4>
+  </div>
+  <div>
+    <app-redbadgecomments
+      [mLocation]="js"
+      [title]="title"
+    ></app-redbadgecomments>
+  </div>
+</div>
