@@ -145,7 +145,7 @@ export class LoginComponent implements OnInit {
     console.log(this.loginAdminData);
     if (!this.loginAdminData.email && !this.loginAdminData.password) {
       this._snackBar.openSnackBar(
-        "Please enter your email and password",
+        "Please enter your Administrative email and password",
         "loginFail",
         5000
       );
