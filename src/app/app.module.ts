@@ -33,6 +33,9 @@ import { CommentsService } from "./shared/comments.service";
 import { AngularComponent } from "./angular/angular.component";
 import { UserinfoComponent } from "./userinfo/userinfo.component";
 import { AuthGuard } from "./auth.guard";
+import { MainnavComponent } from './mainnav/mainnav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,8 @@ import { AuthGuard } from "./auth.guard";
     RedbadgecommentscreateComponent,
     RedbadgecommentslistComponent,
     AngularComponent,
-    UserinfoComponent
+    UserinfoComponent,
+    MainnavComponent
   ],
 
   imports: [
@@ -66,7 +70,13 @@ import { AuthGuard } from "./auth.guard";
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [AuthService, ItemsService, CommentsService, AuthGuard],
   bootstrap: [AppComponent]
