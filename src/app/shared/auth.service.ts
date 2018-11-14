@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
 import { EmailValidator } from "@angular/forms";
 import { Router } from "@angular/router";
-import { APIURL } from "../../environments/environment.prod"
+import { APIURL } from "../../environments/environment.prod";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -29,10 +29,7 @@ export class AuthService {
   private _signUpUrl = `${APIURL}/user/signup`;
   // private _deleteUsernameUrl = `${APIURL}/user/${this.id}/delete`;
 
-  constructor(
-    private http: HttpClient, 
-    private _router: Router,
-    ) {}
+  constructor(private http: HttpClient, private _router: Router) {}
 
   loginUser(user) {
     return this.http.post<any>(this._loginUrl, { user: user }, httpOptions);
@@ -46,11 +43,7 @@ export class AuthService {
   editUsername(user) {
     let id = localStorage.getItem("id");
     let _updateUsernameUrl = `${APIURL}/user/${id}/update`;
-    return this.http.put<any>(
-      _updateUsernameUrl,
-      { user },
-      httpOptionsAuth
-    );
+    return this.http.put<any>(_updateUsernameUrl, { user }, httpOptionsAuth);
   }
 
   deleteUser() {
@@ -80,5 +73,9 @@ export class AuthService {
       { user: user },
       httpOptions
     );
+  }
+
+  loggedIn() {
+    return !!localStorage.getItem("token");
   }
 }

@@ -32,6 +32,7 @@ import { RedbadgecommentslistComponent } from "./redbadgecommentslist/redbadgeco
 import { CommentsService } from "./shared/comments.service";
 import { AngularComponent } from "./angular/angular.component";
 import { UserinfoComponent } from "./userinfo/userinfo.component";
+import { AuthGuard } from "./auth.guard";
 
 @NgModule({
   declarations: [
@@ -67,7 +68,7 @@ import { UserinfoComponent } from "./userinfo/userinfo.component";
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [AuthService, ItemsService, CommentsService],
+  providers: [AuthService, ItemsService, CommentsService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

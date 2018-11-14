@@ -1,4 +1,4 @@
-.card-container {
+.cards-container {
   margin: 150px 5% 0 5%;
   border-radius: 5px;
   filter: drop-shadow(0 0 0.75rem darkgray);
@@ -35,13 +35,13 @@
 }
 
 @media (min-width: 959px) {
-  .card-container {
+  .cards-container {
     margin: 150px 10% 0 10%;
   }
 }
 
 @media (min-width: 1280px) {
-  .card-container {
+  .cards-container {
     margin: 250px 0 0 0;
     min-width: 450px;
   }
