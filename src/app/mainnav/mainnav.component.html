@@ -1,0 +1,120 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)"
+  >
+    <mat-toolbar class="menu-title-color">Menu</mat-toolbar>
+    <mat-nav-list>
+      <button mat-button [matMenuTriggerFor]="goldbadge">Gold Badge</button>
+      <mat-menu #goldbadge="matMenu">
+        <button mat-menu-item routerLink="/goldbadge">Gold Badge Home</button>
+        <button mat-menu-item routerLink="/javascript">JavaScript</button>
+        <button mat-menu-item routerLink="/html">HTML</button>
+        <button mat-menu-item routerLink="/css">CSS</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="bluebadge">Blue Badge</button>
+      <mat-menu #bluebadge="matMenu">
+        <button mat-menu-item routerLink="#">Under Construction</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="redbadge">Red Badge</button>
+      <mat-menu #redbadge="matMenu">
+        <button mat-menu-item routerLink="/redbadge">Red Badge Home</button>
+        <button mat-menu-item routerLink="/angular">Angular</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="myfootlocker">
+        My Footlocker
+      </button>
+      <mat-menu #myfootlocker="matMenu">
+        <button mat-menu-item routerLink="/items">My Footlocker</button>
+      </mat-menu>
+
+      <button
+        mat-button
+        (click)="showLoginOrLogout()"
+        [matMenuTriggerFor]="account"
+      >
+        Account
+      </button>
+      <mat-menu #account="matMenu">
+        <button mat-menu-item routerLink="/account">Account</button>
+        <button *ngIf="hasToken" mat-menu-item (click)="userLogout()">
+          Log Out
+        </button>
+        <button *ngIf="!hasToken" mat-menu-item routerLink="/">Log In</button>
+      </mat-menu>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="navbar">
+    <mat-toolbar class="navbar">
+      <mat-toolbar-row>
+        <button
+          class="toggle-button"
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="(isHandset$ | async)"
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span class="title">
+          <a [routerLink]="['/welcome']"> <img src="assets/img/pic1.png" /> </a>
+        </span>
+        <!-- <span class="example-spacer"></span> -->
+        <button class="left hide" mat-button [matMenuTriggerFor]="goldbadge">
+          Gold Badge
+        </button>
+        <mat-menu #goldbadge="matMenu">
+          <button mat-menu-item routerLink="/goldbadge">Gold Badge Home</button>
+          <button mat-menu-item routerLink="/javascript">JavaScript</button>
+          <button mat-menu-item routerLink="/html">HTML</button>
+          <button mat-menu-item routerLink="/css">CSS</button>
+        </mat-menu>
+
+        <button class="hide" mat-button [matMenuTriggerFor]="bluebadge">
+          Blue Badge
+        </button>
+        <mat-menu #bluebadge="matMenu">
+          <button mat-menu-item routerLink="#">Under Construction</button>
+        </mat-menu>
+
+        <button class="hide" mat-button [matMenuTriggerFor]="redbadge">
+          Red Badge
+        </button>
+        <mat-menu #redbadge="matMenu">
+          <button mat-menu-item routerLink="/redbadge">Red Badge Home</button>
+          <button mat-menu-item routerLink="/angular">Angular</button>
+        </mat-menu>
+
+        <button class="hide" mat-button [matMenuTriggerFor]="myfootlocker">
+          My Footlocker
+        </button>
+        <mat-menu #myfootlocker="matMenu">
+          <button mat-menu-item routerLink="/items">My Footlocker</button>
+        </mat-menu>
+
+        <button
+          class="hide"
+          mat-button
+          (click)="showLoginOrLogout()"
+          [matMenuTriggerFor]="account"
+        >
+          Account
+        </button>
+        <mat-menu #account="matMenu">
+          <button mat-menu-item routerLink="/account">Account</button>
+          <button *ngIf="hasToken" mat-menu-item (click)="userLogout()">
+            Log Out
+          </button>
+          <button *ngIf="!hasToken" mat-menu-item routerLink="/">Log In</button>
+        </mat-menu>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
